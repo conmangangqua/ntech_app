@@ -1,25 +1,15 @@
 {
   "apps": [
     {
-      "id": "flutter_base",
-      "name": "Flutter Base",
-      "icon": "",
+      "id": "sonic_cleaner",
+      "name": "Sonic Cleaner",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
-        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/flutter_base_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/flutter_base_prod.apk"
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk"
       }
-    },
-    {
-      "id": "sonic_cleaner",
-      "name": "Sonic Cleaner",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
-      "platform": "Android",
-      "description": "",
-      "features": [],
-      "downloads": {}
     }
   ]
 }
