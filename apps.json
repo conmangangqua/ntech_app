@@ -3,12 +3,13 @@
     {
       "id": "sonic_cleaner",
       "name": "Sonic Cleaner",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
-        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk"
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk",
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk"
       }
     }
   ]
