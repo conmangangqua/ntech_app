@@ -1,17 +1,3 @@
 {
-  "apps": [
-    {
-      "id": "example-ios",
-      "name": "Example iOS App",
-      "icon": "https://raw.githubusercontent.com/user/hub/main/icon.png",
-      "platform": "iOS",
-      "description": "Ứng dụng ví dụ cho hệ điều hành iOS",
-      "features": ["OTA Install", "Platinum UI"],
-      "downloads": {
-        "dev": "https://github.com/user/hub/releases/download/ios_dev/AppDev.plist",
-        "prod": "https://github.com/user/hub/releases/download/ios_prod/AppProd.plist"
-      }
-    }
-  ]
+  "apps": []
 }
-
