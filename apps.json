@@ -11,6 +11,17 @@
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk",
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk"
       }
+    },
+    {
+      "id": "sticker_lab",
+      "name": "Sticker Lab",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_dev.apk"
+      }
     }
   ]
 }
