@@ -23,11 +23,13 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_prod.apk"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sticker_lab.aab"
       },
       "versions": {
         "dev": "1.0.0+26051401",
-        "prod": "1.0.0+26041901"
+        "prod": "1.0.0+26041901",
+        "aab": "1.0.0+26051401"
       }
     },
     {
