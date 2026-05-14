@@ -36,11 +36,13 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_prod.apk"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/veilo_browser.aab"
       },
       "versions": {
         "dev": "1.0.0+26051401",
-        "prod": "1.0.0+26051401"
+        "prod": "1.0.0+26051401",
+        "aab": "1.0.0+26051401"
       }
     }
   ]
