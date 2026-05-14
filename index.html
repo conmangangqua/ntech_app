@@ -250,6 +250,9 @@
       background-color: var(--accent-orange-hover);
     }
 
+
+    .btn-stack { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.1; }
+    .btn-stack .ver { font-size: 10px; font-weight: 600; opacity: 0.75; letter-spacing: 0; }
     /* Skeleton Placeholder hoặc Báo Lỗi */
     .system-msg {
       grid-column: 1 / -1;
@@ -303,6 +306,10 @@
           const devUrl = app.downloads?.dev || "";
           const prodUrl = app.downloads?.prod || "";
           
+        const v = app.versions || {};
+        const stack = (label, k) => v[k]
+          ? `<span class="btn-stack">${label}<span class="ver">v${v[k]}</span></span>`
+          : label;
           /* Logic Định Tuyến cho IOS bắt buộc Mã Hoá URL an toàn */
           const formatUrl = (url, isIOS) => {
             if (!url) return "";
@@ -331,9 +338,9 @@
               ${features ? `<div class="feature-group">${features}</div>` : ""}
               
               <div class="card-actions">
-                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}">🛠 Cài bản Dev</a>` : ""}
-                ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}">🚀 Cài bản Live</a>` : ""}
-                ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}">📦 Tải file AAB</a>` : ""}
+                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}">🛠 ${stack('Cài bản Dev','dev')}</a>` : ""}
+                ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}">🚀 ${stack('Cài bản Live','prod')}</a>` : ""}
+                ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}">📦 ${stack('Tải file AAB','aab')}</a>` : ""}
               </div>
             </article>
           `;

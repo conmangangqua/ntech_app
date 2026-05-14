@@ -146,11 +146,15 @@ jobs:
                   if base_id.endswith('_'): base_id = base_id[:-1]
               elif name.endswith('_icon.png'):
                   base_id = name.replace('_icon.png', '')
-              
+              elif name.endswith('_aab.version'):
+                  base_id = name.replace('_aab.version', '')
+              elif name.endswith('.version'):
+                  base_id = name.replace('.version', '')
+
               if base_id:
-                  # Clean up double _dev suffixes or similar if they exist
-                  if base_id.endswith('_dev'):
-                      base_id = base_id[:-4]
+                  # Clean up double _dev/_prod suffixes if they exist
+                  if base_id.endswith('_dev') or base_id.endswith('_prod'):
+                      base_id = base_id.rsplit('_', 1)[0]
                   app_ids.add(base_id)
           
           app_ids = sorted(list(app_ids))
@@ -166,12 +170,15 @@ jobs:
               icon_url = ""
               ios_dev = ""
               ios_prod = ""
-              
+              dev_version_url = ""
+              prod_version_url = ""
+              aab_version_url = ""
+
               for asset in all_assets:
                   name = asset.get('name', '')
                   url = asset.get('browser_download_url', '')
                   low_name = name.lower()
-                  
+
                   if name == f"{app_id}_dev.apk":
                       dev_url = url
                   elif name == f"{app_id}_prod.apk":
@@ -180,12 +187,36 @@ jobs:
                       aab_url = url
                   elif name == f"{app_id}_icon.png":
                       icon_url = url
+                  elif name == f"{app_id}_dev.version":
+                      dev_version_url = url
+                  elif name == f"{app_id}_prod.version":
+                      prod_version_url = url
+                  elif name == f"{app_id}_aab.version":
+                      aab_version_url = url
                   # iOS handling
                   elif low_name == f"{app_id}_dev.ipa": pass # we use plist for download
                   elif low_name == f"{app_id}_dev.plist" or low_name == f"{app_id}dev.plist" or low_name == "appdev.plist":
                       ios_dev = url
                   elif low_name == f"{app_id}_prod.plist" or low_name == f"{app_id}prod.plist" or low_name == "appprod.plist":
                       ios_prod = url
+
+              # Fetch version content from sidecar URLs (each file ~16 bytes)
+              import urllib.request
+              def fetch_version(u):
+                  if not u: return ""
+                  try:
+                      with urllib.request.urlopen(u, timeout=10) as r:
+                          return r.read().decode('utf-8', errors='ignore').strip()
+                  except Exception as e:
+                      print(f"  ! version fetch failed for {u}: {e}")
+                      return ""
+              versions = {}
+              v = fetch_version(dev_version_url)
+              if v: versions['dev'] = v
+              v = fetch_version(prod_version_url)
+              if v: versions['prod'] = v
+              v = fetch_version(aab_version_url)
+              if v: versions['aab'] = v
               
               # Format app name (video_downloader -> Video Downloader)
               app_name = ' '.join(word.capitalize() for word in app_id.replace('_', ' ').split())
@@ -225,7 +256,8 @@ jobs:
                   'platform': platform,
                   'description': '',
                   'features': [],
-                  'downloads': downloads
+                  'downloads': downloads,
+                  'versions': versions
               }
               apps.append(app)
           
