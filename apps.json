@@ -11,7 +11,8 @@
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk",
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sonic_cleaner.aab"
-      }
+      },
+      "versions": {}
     },
     {
       "id": "sticker_lab",
@@ -23,7 +24,20 @@
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_dev.apk",
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_prod.apk"
-      }
+      },
+      "versions": {}
+    },
+    {
+      "id": "veilo_browser",
+      "name": "Veilo Browser",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_dev.apk"
+      },
+      "versions": {}
     }
   ]
 }
