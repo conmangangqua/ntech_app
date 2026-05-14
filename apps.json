@@ -30,7 +30,7 @@
     {
       "id": "veilo_browser",
       "name": "Veilo Browser",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -39,7 +39,8 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_prod.apk"
       },
       "versions": {
-        "dev": "1.0.0+26051401"
+        "dev": "1.0.0+26051401",
+        "prod": "1.0.0+26051401"
       }
     }
   ]
