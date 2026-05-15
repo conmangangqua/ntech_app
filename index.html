@@ -292,13 +292,14 @@
     .aab-st{margin-top:14px;font-size:.83rem;font-weight:600;text-align:center;min-height:18px;word-break:break-word;color:#64748b}
     .aab-st a{color:#059669;font-weight:800}
   </style>
-  <style>/* AAB_BTNFIX */
-    .btn{min-width:0}
-    .btn-stack{min-width:0;max-width:100%;overflow:hidden}
-    .btn-stack .ver{white-space:nowrap;font-size:9px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
-    @media (max-width:480px){
-      .btn{padding-left:8px;padding-right:8px;gap:6px;font-size:.82rem}
-      .btn-stack .ver{font-size:8px}
+  <style>/* AAB_BTNFIX3 */
+    .btn{position:relative}
+    .btn-ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);display:flex;align-items:center;line-height:1;pointer-events:none}
+    .btn-stack{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;min-width:0}
+    .btn-stack .ver{white-space:nowrap;font-size:10px}
+    @media (max-width:600px){
+      main{grid-template-columns:1fr;gap:1rem}
+      .app-card{padding:20px}
     }
   </style>
 
@@ -341,7 +342,7 @@
         const v = app.versions || {};
         const stack = (label, k) => v[k]
           ? `<span class="btn-stack">${label}<span class="ver">v${v[k]}</span></span>`
-          : label;
+          : `<span class="btn-stack">${label}</span>`;
           /* Logic Định Tuyến cho IOS bắt buộc Mã Hoá URL an toàn */
           const formatUrl = (url, isIOS) => {
             if (!url) return "";
@@ -370,10 +371,10 @@
               ${features ? `<div class="feature-group">${features}</div>` : ""}
               
               <div class="card-actions">
-                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}">🛠 ${stack('Cài bản Dev','dev')}</a>` : ""}
-                ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}">🚀 ${stack('Cài bản Live','prod')}</a>` : ""}
-                ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}">📦 ${stack('Tải file AAB','aab')}</a>` : ""}
-          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')">🔨 ${buildLabel}</button>
+                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}"><span class="btn-ic">🛠</span>${stack('Cài bản Dev','dev')}</a>` : ""}
+                ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}"><span class="btn-ic">🚀</span>${stack('Cài bản Live','prod')}</a>` : ""}
+                ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}"><span class="btn-ic">📦</span>${stack('Tải file AAB','aab')}</a>` : ""}
+          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')"><span class="btn-ic">🔨</span><span class="btn-stack">${buildLabel}</span></button>
               </div>
             </article>
           `;
