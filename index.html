@@ -273,6 +273,26 @@
     }
 
   </style>
+  <style>/* AAB_TRIGGER_INJECTED */
+    .btn-build{grid-column:span 2;background:#0f172a;color:#fff;border:1px solid #0f172a;cursor:pointer;font-family:inherit}
+    .btn-build:hover{background:#1e293b}
+    .aab-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:99999;padding:20px}
+    .aab-ov.open{display:flex}
+    .aab-md{background:#fff;border-radius:20px;padding:28px 24px;width:100%;max-width:380px;box-shadow:0 30px 80px rgba(0,0,0,.3);font-family:inherit}
+    .aab-md h3{font-size:1.25rem;color:#0f172a;margin:0 0 4px}
+    .aab-md .sub{font-size:.85rem;color:#64748b;margin:0 0 18px;font-weight:600}
+    .aab-md label{display:block;font-size:.72rem;font-weight:700;color:#64748b;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.03em}
+    .aab-md input{width:100%;padding:12px 15px;border:1.5px solid #e2e8f0;border-radius:12px;font-family:inherit;font-size:.95rem;font-weight:600;color:#0f172a;outline:none;box-sizing:border-box}
+    .aab-md input:focus{border-color:#0f172a}
+    .aab-act{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .aab-act button{padding:13px;border-radius:14px;font-weight:700;font-size:.9rem;border:none;cursor:pointer;font-family:inherit}
+    .aab-cancel{background:#f1f5f9;color:#475569}
+    .aab-ok{background:#059669;color:#fff}
+    .aab-ok:disabled{opacity:.55;cursor:not-allowed}
+    .aab-st{margin-top:14px;font-size:.83rem;font-weight:600;text-align:center;min-height:18px;word-break:break-word;color:#64748b}
+    .aab-st a{color:#059669;font-weight:800}
+  </style>
+
 </head>
 <body>
 
@@ -301,6 +321,8 @@
 
         data.apps.forEach((app, index) => {
           const isIOS = (app.platform || "").toLowerCase().includes("ios");
+        const isAndroid = !app.platform || app.platform.toLowerCase().includes("android");
+        const buildLabel = (isIOS && !isAndroid) ? "Build TestFlight" : "Build AAB";
           const iconSrc = app.icon || "";
           
           const devUrl = app.downloads?.dev || "";
@@ -341,6 +363,7 @@
                 ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}">🛠 ${stack('Cài bản Dev','dev')}</a>` : ""}
                 ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}">🚀 ${stack('Cài bản Live','prod')}</a>` : ""}
                 ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}">📦 ${stack('Tải file AAB','aab')}</a>` : ""}
+          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')">🔨 ${buildLabel}</button>
               </div>
             </article>
           `;
@@ -351,6 +374,80 @@
         document.getElementById("appContainer").innerHTML = '<div class="system-msg" style="color:var(--accent-orange)"><b>❌ Lỗi Hệ Thống:</b> Không thể tải danh sách ứng dụng. Vui lòng F5 (tải lại trang).</div>';
         console.error("Lỗi Fetch JSON:", err);
       });
+  </script>
+
+  <div class="aab-ov" id="buildModal">
+    <div class="aab-md">
+      <h3 id="bmTitle">🔨 Build</h3>
+      <p class="sub" id="bmApp"></p>
+      <label>Version Name</label>
+      <input type="text" id="bmName" placeholder="vd 1.0.1" autocomplete="off">
+      <label>Version Code</label>
+      <input type="text" id="bmCode" inputmode="numeric" placeholder="vd 26051501" autocomplete="off">
+      <label>Mã PIN</label>
+      <input type="password" id="bmPin" inputmode="numeric" placeholder="Nhập PIN" autocomplete="off">
+      <div class="aab-st" id="bmStatus"></div>
+      <div class="aab-act">
+        <button type="button" class="aab-cancel" onclick="closeBuildModal()">Huỷ</button>
+        <button type="button" class="aab-ok" id="bmOk" onclick="submitBuild()">Build</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const BUILD_API = "https://aab-trigger.vercel.app";
+    let bmAppId = "";
+    const $ = (id) => document.getElementById(id);
+    async function openBuildModal(appId, appName) {
+      bmAppId = appId;
+      $("bmTitle").textContent = "🔨 Build";
+      $("bmApp").textContent = appName + " — kích build từ xa";
+      $("bmName").value = ""; $("bmCode").value = ""; $("bmPin").value = "";
+      $("bmStatus").style.color = "#64748b";
+      $("bmStatus").textContent = "Đang lấy version hiện tại...";
+      $("bmOk").disabled = true;
+      $("buildModal").classList.add("open");
+      try {
+        const r = await fetch(BUILD_API + "/api/version?app_id=" + encodeURIComponent(appId));
+        const d = await r.json();
+        if (!r.ok) throw new Error(d.error || "Không lấy được version");
+        $("bmTitle").textContent = "🔨 Build " + (d.build_label || "");
+        $("bmApp").textContent = appName + " — " + (d.platform === "ios" ? "iOS TestFlight" : "Android AAB");
+        $("bmName").value = d.version_name || "";
+        $("bmCode").value = d.suggested_code || d.version_code || "";
+        $("bmStatus").style.color = "#64748b";
+        $("bmStatus").textContent = "Hiện tại: " + d.current_name + "+" + d.current_code + " → đề xuất code mới: " + d.suggested_code;
+      } catch (e) {
+        $("bmStatus").style.color = "#ef4444";
+        $("bmStatus").textContent = "⚠️ " + e.message;
+      } finally {
+        $("bmOk").disabled = false;
+      }
+    }
+    function closeBuildModal() { $("buildModal").classList.remove("open"); }
+    async function submitBuild() {
+      const payload = { app_id: bmAppId, version_name: $("bmName").value.trim(), version_code: $("bmCode").value.trim(), pin: $("bmPin").value.trim() };
+      if (!payload.version_name || !payload.version_code || !payload.pin) {
+        $("bmStatus").style.color = "#ef4444";
+        $("bmStatus").textContent = "⚠️ Điền đủ Version Name, Code và PIN.";
+        return;
+      }
+      $("bmOk").disabled = true;
+      $("bmStatus").style.color = "#64748b";
+      $("bmStatus").textContent = "⏳ Đang kích build...";
+      try {
+        const r = await fetch(BUILD_API + "/api/build", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+        const d = await r.json();
+        if (!r.ok) throw new Error(d.error || "Build thất bại");
+        $("bmStatus").style.color = "#059669";
+        $("bmStatus").innerHTML = "✅ " + d.message + ' <a href="' + d.pipeline_url + '" target="_blank">Xem pipeline</a>';
+      } catch (e) {
+        $("bmStatus").style.color = "#ef4444";
+        $("bmStatus").textContent = "❌ " + e.message;
+      } finally {
+        $("bmOk").disabled = false;
+      }
+    }
+    document.getElementById("buildModal").addEventListener("click", (e) => { if (e.target.id === "buildModal") closeBuildModal(); });
   </script>
 </body>
 </html>
