@@ -17,7 +17,7 @@
     {
       "id": "sticker_lab",
       "name": "Sticker Lab",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
