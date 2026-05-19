@@ -12,7 +12,8 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sonic_cleaner.aab"
       },
-      "versions": {}
+      "versions": {},
+      "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner"
     },
     {
       "id": "sticker_lab",
@@ -30,7 +31,8 @@
         "dev": "1.0.0+26051901",
         "prod": "1.0.0+26051901",
         "aab": "1.0.0+26051901"
-      }
+      },
+      "store": ""
     },
     {
       "id": "veilo_browser",
@@ -48,7 +50,8 @@
         "dev": "1.0.0+26051401",
         "prod": "1.0.0+26051401",
         "aab": "1.0.0+26051401"
-      }
+      },
+      "store": ""
     }
   ]
 }
