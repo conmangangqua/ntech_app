@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "id": "rollicon_3d",
+      "name": "Rollicon 3d",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_dev.apk"
+      },
+      "versions": {
+        "dev": "1.0.0+1"
+      },
+      "store": ""
+    },
+    {
       "id": "sonic_cleaner",
       "name": "Sonic Cleaner",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
