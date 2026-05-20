@@ -31,7 +31,8 @@
       },
       "versions": {
         "dev": "1.0.1+26052001",
-        "prod": "1.0.1+26051901"
+        "prod": "1.0.1+26051901",
+        "aab": "1.0.1+26052001"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner"
     },
