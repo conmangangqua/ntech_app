@@ -72,6 +72,21 @@
         "aab": "1.0.0+26051401"
       },
       "store": ""
+    },
+    {
+      "id": "calorie_fasting_tracker",
+      "name": "Calorie Fasting Tracker",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/calorie_fasting_tracker_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/calorie_fasting_tracker_dev.apk",
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/calorie_fasting_tracker_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/calorie_fasting_tracker.aab"
+      },
+      "versions": {},
+      "store": ""
     }
   ]
 }
