@@ -651,6 +651,12 @@
       #vdMd h3{font-size:1.15rem}
       #vdMd .box{font-size:.88rem;max-height:42vh}
     }
+    @media(max-width:720px){
+      #vdOv{padding:12px}
+      #vdMd{padding:20px 18px;border-radius:18px}
+      #vdMd h3{font-size:1.15rem}
+      #vdMd .box{font-size:.88rem;max-height:42vh}
+    }
     #vdMd input{width:100%;box-sizing:border-box;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:12px;font-size:.95rem;font-weight:600;outline:none;margin-top:16px}
     #vdMd input:focus{border-color:#7c3aed}
     #vdMsg{min-height:18px;margin-top:8px;font-size:.8rem;font-weight:600;text-align:center;color:#ef4444}
@@ -659,6 +665,8 @@
     .vd-close{background:#f1f5f9;color:#475569}
     .vd-gen{background:#7c3aed;color:#fff}
     .vd-gen:disabled{opacity:.55;cursor:not-allowed}
+.vd-spin{width:48px;height:48px;border:4px solid #ede9fe;border-top-color:#7c3aed;border-radius:50%;animation:vdspin .8s linear infinite}
+    @keyframes vdspin{to{transform:rotate(360deg)}}
   </style>
   <div id="vdOv"><div id="vdMd">
     <h3>📄 Store Description</h3>
@@ -822,7 +830,14 @@
 
     window.openViewDesc=async function(id,nm){
       appId=id; appEl.textContent=nm; pin.value=""; msg.textContent="";
-      platEl.textContent=""; fieldsEl.innerHTML="Đang tải…";
+      platEl.textContent="";
+      fieldsEl.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:14px">'+
+        '<div class="vd-spin"></div>'+
+        '<div style="color:#7c3aed;font-weight:700;font-size:.92rem">Đang tải mô tả từ GitHub…</div>'+
+        '<div style="color:#94a3b8;font-size:.78rem">Đang kiểm tra Privacy/Terms URL…</div>'+
+        '</div>';
+      gb.disabled=true;
+      var lb=document.getElementById("vdGenLegalBtn"); if(lb) lb.disabled=true;
       ov.classList.add("open");
       try{
         var r=await fetch(API+"/api/description?app_id="+encodeURIComponent(id));
@@ -836,6 +851,7 @@
         if(d.platform==="appstore") renderAppstore(d);
         else renderGoogle(d);
       }catch(e){ fieldsEl.innerHTML="<div class=\"box\">⚠️ "+escapeHtml(e.message)+"</div>"; }
+      finally{ gb.disabled=false; if(lb) lb.disabled=false; }
     };
     window.vdClose=function(){ ov.classList.remove("open"); };
     ov.addEventListener("click",function(e){ if(e.target===ov) vdClose(); });
