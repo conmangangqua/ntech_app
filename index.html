@@ -333,6 +333,7 @@
           return;
         }
         allApps = data.apps;
+        data.apps.sort((a,b) => (b.store ? 1 : 0) - (a.store ? 1 : 0));
 
         data.apps.forEach((app, index) => {
           const isIOS = (app.platform || "").toLowerCase().includes("ios");
