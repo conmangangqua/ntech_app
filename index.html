@@ -182,6 +182,7 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    .app-desc:empty{display:none}
 
     .feature-group {
       display: flex;
@@ -372,7 +373,7 @@
                 </div>
               </div>
               
-              <p class="app-desc">${app.description || "Chưa có mô tả"}</p>
+              <p class="app-desc">${app.description || ""}</p>
               
               ${features ? `<div class="feature-group">${features}</div>` : ""}
               
