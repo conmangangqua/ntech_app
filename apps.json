@@ -53,7 +53,7 @@
         "prod": "1.0.0+26051901",
         "aab": "1.0.0+26051901"
       },
-      "store": ""
+      "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab"
     },
     {
       "id": "veilo_browser",
@@ -72,7 +72,7 @@
         "prod": "1.0.0+26052001",
         "aab": "1.0.0+26052001"
       },
-      "store": ""
+      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser"
     }
   ]
 }
