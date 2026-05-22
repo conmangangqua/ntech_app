@@ -323,6 +323,73 @@
     .badge.ios, .platform-badge.ios { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(14,165,233,0.3); border: none !important; }
     .badge.android, .platform-badge.android { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(22,163,74,0.3); border: none !important; }
   </style>
+  <style>/* PRO_MAX_UI_UPGRADE */
+    /* Button base: pill, smooth, depth */
+    .btn {
+      border-radius: 14px !important;
+      padding: 13px 18px !important;
+      font-weight: 700 !important;
+      font-size: 0.92rem !important;
+      letter-spacing: 0.01em !important;
+      transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, background 0.2s ease, filter 0.2s ease !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+      filter: brightness(1.08) !important;
+    }
+    .btn:active {
+      transform: translateY(0) scale(0.98) !important;
+      transition-duration: 0.08s !important;
+    }
+    .btn:focus-visible {
+      outline: 2px solid rgba(99, 102, 241, 0.6);
+      outline-offset: 2px;
+    }
+    /* Card hover lift */
+    .app-card {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.3s ease !important;
+    }
+    .app-card:hover {
+      transform: translateY(-4px) !important;
+    }
+    /* Smooth icon scale on button hover */
+    .btn:hover .btn-ic svg { transform: scale(1.08); transition: transform 0.2s ease; }
+    .btn-ic svg { transition: transform 0.2s ease; }
+    /* Badge prominence — gradient with stronger shadow */
+    .badge.ios, .platform-badge.ios {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 6px 16px rgba(14,165,233,0.35), 0 2px 4px rgba(14,165,233,0.2) !important;
+      border: none !important;
+      padding: 6px 14px !important;
+      font-weight: 800 !important;
+    }
+    .badge.android, .platform-badge.android {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 6px 16px rgba(22,163,74,0.35), 0 2px 4px rgba(22,163,74,0.2) !important;
+      border: none !important;
+      padding: 6px 14px !important;
+      font-weight: 800 !important;
+    }
+    /* Health badge styling tighter */
+    .health-badge { padding: 4px 10px !important; font-size: 0.7rem !important; }
+    /* App-icon polish */
+    .app-icon-box, .app-icon {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease !important;
+    }
+    .app-card:hover .app-icon-box, .app-card:hover .app-icon {
+      transform: scale(1.05) !important;
+    }
+    /* Search input polish */
+    .search-wrapper:focus-within, input:focus {
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+    }
+  </style>
 </head>
 <body>
 
