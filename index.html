@@ -315,7 +315,7 @@
     .btn-ic svg{width:18px !important;height:18px !important;stroke:currentColor !important;stroke-width:2 !important;fill:none !important}
     .btn-stack{display:inline-flex !important;flex-direction:column;align-items:center;justify-content:center;width:auto !important;min-width:0}
     .btn-stack .ver{white-space:nowrap;font-size:10px}
-    .badge-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .badge-row{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;overflow:hidden;margin-bottom:18px}
   </style>
   <style>/* badge-gradient-override */
     .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -472,6 +472,13 @@
     .vd-gen:hover { box-shadow: 0 10px 24px rgba(124, 58, 237, 0.4) !important; }
     .health-urls { animation: vdFadeIn 0.3s ease-out; }
   </style>
+  <style>/* ADS_BADGE_UNIFIED */
+    .ads-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.7rem; font-weight: 800; padding: 6px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1; white-space: nowrap; }
+    .ads-badge i, .ads-badge svg { width: 12px; height: 12px; stroke-width: 2.2; flex-shrink: 0; }
+    .ads-badge.has-ads { background: linear-gradient(135deg, #fb923c 0%, #f59e0b 100%); color: #fff; box-shadow: 0 4px 12px rgba(245,158,11,0.35); }
+    .ads-badge.no-ads { background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%); color: #fff; box-shadow: 0 4px 12px rgba(100,116,139,0.25); }
+    .badge-row { display: flex !important; align-items: center !important; gap: 8px !important; flex-wrap: nowrap !important; overflow: hidden; margin-bottom: 18px; }
+  </style>
 </head>
 <body>
 
@@ -593,14 +600,13 @@
           if(!card) return;
           const badge = card.querySelector('.ads-badge');
           if(!badge) return;
-          badge.style.display="inline-flex";
+          badge.className = "ads-badge " + (a.has_ads ? "has-ads" : "no-ads");
+          badge.style.display = "inline-flex";
           if(a.has_ads){
             const sdks = (a.ads||[]).join('+');
-            badge.style.cssText += "background:linear-gradient(135deg,#fb923c 0%,#f59e0b 100%);color:#fff;font-size:.7rem;font-weight:800;padding:5px 12px;border-radius:20px;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(245,158,11,.3)";
-            badge.innerHTML = '<i data-lucide="megaphone" style="width:13px;height:13px"></i>'+sdks;
+            badge.innerHTML = '<i data-lucide="megaphone"></i>'+sdks;
           } else {
-            badge.style.cssText += "background:#f1f5f9;color:#64748b;font-size:.7rem;font-weight:700;padding:5px 12px;border-radius:20px;align-items:center;gap:5px;border:1px solid #e2e8f0";
-            badge.innerHTML = '<i data-lucide="ban" style="width:12px;height:12px"></i>No Ads';
+            badge.innerHTML = '<i data-lucide="ban"></i>No Ads';
           }
           window.lucide && lucide.createIcons();
         });
