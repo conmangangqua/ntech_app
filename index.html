@@ -599,7 +599,7 @@
     const $ = (id) => document.getElementById(id);
     async function openBuildModal(appId, appName) {
       bmAppId = appId;
-      $("bmTitle").innerHTML = \'<i data-lucide="hammer" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px"></i>Build\';
+      $("bmTitle").innerHTML = `<i data-lucide="hammer" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px"></i>Build`;
       $("bmApp").textContent = appName + " — kích build từ xa";
       $("bmName").value = ""; $("bmCode").value = ""; $("bmPin").value = "";
       $("bmStatus").style.color = "#64748b";
@@ -610,7 +610,7 @@
         const r = await fetch(BUILD_API + "/api/version?app_id=" + encodeURIComponent(appId));
         const d = await r.json();
         if (!r.ok) throw new Error(d.error || "Không lấy được version");
-        $("bmTitle").innerHTML = \'<i data-lucide="hammer" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px"></i>Build \' + (d.build_label || ""); window.lucide && lucide.createIcons();
+        $("bmTitle").innerHTML = `<i data-lucide="hammer" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px"></i>Build ` + (d.build_label || ""); window.lucide && lucide.createIcons();
         $("bmApp").textContent = appName + " — " + (d.platform === "ios" ? "iOS TestFlight" : "Android AAB");
         $("bmName").value = d.version_name || "";
         $("bmCode").value = d.suggested_code || d.version_code || "";
