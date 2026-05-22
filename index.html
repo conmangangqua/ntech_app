@@ -572,14 +572,44 @@
       return '<div style="font-size:.7rem;line-height:1.4;margin-top:2px"><span style="color:#64748b;font-weight:600">'+label+'</span> '+okBadge+'<br><a href="'+safe+'" target="_blank" rel="noopener" style="color:'+color+';word-break:break-all;text-decoration:underline">'+safe+'</a></div>';
     }
     function clearHealthUI(){
-      document.querySelectorAll(".health-badge").forEach(b => { b.style.display="none"; b.textContent=""; });
+      document.querySelectorAll(".health-badge, .ads-badge").forEach(b => { b.style.display="none"; b.textContent=""; });
       document.querySelectorAll(".health-urls").forEach(u => u.remove());
       document.querySelectorAll(".app-card").forEach(c => { c.style.boxShadow=""; });
+    }
+    async function runAdsCheck(){
+      if(!allApps.length) return;
+      const apps = allApps.filter(a => a.id).slice(0, 50).map(a => ({id: a.id}));
+      try{
+        const r = await fetch("https://aab-trigger.vercel.app/api/adscheck", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({apps})
+        });
+        if(!r.ok) return;
+        const data = await r.json();
+        Object.entries(data.results || {}).forEach(([appId, a]) => {
+          const card = document.querySelector('.app-card[data-app-id="'+CSS.escape(appId)+'"]');
+          if(!card) return;
+          const badge = card.querySelector('.ads-badge');
+          if(!badge) return;
+          badge.style.display="inline-flex";
+          if(a.has_ads){
+            const sdks = (a.ads||[]).join('+');
+            badge.style.cssText += "background:linear-gradient(135deg,#fb923c 0%,#f59e0b 100%);color:#fff;font-size:.7rem;font-weight:800;padding:5px 12px;border-radius:20px;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(245,158,11,.3)";
+            badge.innerHTML = '<i data-lucide="megaphone" style="width:13px;height:13px"></i>'+sdks;
+          } else {
+            badge.style.cssText += "background:#f1f5f9;color:#64748b;font-size:.7rem;font-weight:700;padding:5px 12px;border-radius:20px;align-items:center;gap:5px;border:1px solid #e2e8f0";
+            badge.innerHTML = '<i data-lucide="ban" style="width:12px;height:12px"></i>No Ads';
+          }
+          window.lucide && lucide.createIcons();
+        });
+      }catch(e){}
     }
     async function runHealthCheck(){
       if(localStorage.getItem("aab_authed")!=="1"){ clearHealthUI(); return; }
       if(!allApps.length) return;
       const apps = allApps.filter(a => a.id).slice(0, 50).map(a => ({id: a.id, store_url: a.store || null}));
+      runAdsCheck();
       try{
         const r = await fetch("https://aab-trigger.vercel.app/api/healthbulk", {
           method: "POST",
@@ -613,7 +643,7 @@
             if(addBtn){
               addBtn.setAttribute("data-has-store","0");
               const stack = addBtn.querySelector('.btn-stack');
-              if(stack) stack.innerHTML='Update Store Link (URL 404)';
+              if(stack) stack.textContent="Update Store Link (URL 404)";
             }
           } else if(h.store_url && h.store_ok===true){
             card.classList.add("store-live");
@@ -652,7 +682,6 @@
           return score(b) - score(a);
         });
         cardsToSort.forEach(c => container.appendChild(c));
-        window.lucide && lucide.createIcons();
       }catch(e){ /* silent */ }
     }
     window.runHealthCheck = runHealthCheck;
