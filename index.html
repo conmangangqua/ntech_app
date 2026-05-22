@@ -309,6 +309,14 @@
 
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <style>/* AAB_BTNFIX5 (unified icon+text centered) */
+    .btn{display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;position:relative}
+    .btn-ic{position:static !important;display:inline-flex !important;flex-shrink:0;align-items:center;justify-content:center;width:18px;height:18px;line-height:1;pointer-events:none;color:currentColor;transform:none !important;left:auto !important;top:auto !important}
+    .btn-ic svg{width:18px !important;height:18px !important;stroke:currentColor !important;stroke-width:2 !important;fill:none !important}
+    .btn-stack{display:inline-flex !important;flex-direction:column;align-items:center;justify-content:center;width:auto !important;min-width:0}
+    .btn-stack .ver{white-space:nowrap;font-size:10px}
+    .badge-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  </style>
   <style>/* badge-gradient-override */
     .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em; }
     .badge i, .badge svg { width: 14px; height: 14px; stroke-width: 2.2; }
@@ -386,7 +394,7 @@
               ${features ? `<div class="feature-group">${features}</div>` : ""}
               
               <div class="card-actions">
-                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}"><span class="btn-ic">🛠</span>${stack('Cài bản Dev','dev')}</a>` : ""}
+                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}"><i class="btn-ic" data-lucide="wrench"></i>${stack('Cài bản Dev','dev')}</a>` : ""}
                 ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}"><i class="btn-ic" data-lucide="rocket"></i>${stack('Cài bản Live','prod')}</a>` : ""}
                 ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}"><i class="btn-ic" data-lucide="package"></i>${stack('Tải file AAB','aab')}</a>` : ""}
                 ${app.store ? `<a class="btn btn-store" href="${app.store}" target="_blank" rel="noopener"><i class="btn-ic" data-lucide="shopping-bag"></i><span class="btn-stack">View on Store</span></a>` : ""} <button type="button" class="btn btn-addstore" data-has-store="${app.store?1:0}" onclick="openStoreModal('${app.id}','${(app.name || '').replace(/'/g, "\\'")}')"><i class="btn-ic" data-lucide="plus"></i><span class="btn-stack">Add Store Link</span></button>
@@ -396,6 +404,7 @@
           `;
           container.insertAdjacentHTML("beforeend", html);
         });
+        window.lucide && lucide.createIcons();
         runHealthCheck();
       })
       .catch(err => {
@@ -455,7 +464,7 @@
             if(addBtn){
               addBtn.setAttribute("data-has-store","0");
               const stack = addBtn.querySelector('.btn-stack');
-              if(stack) stack.textContent="Update Store Link (URL 404)";
+              if(stack) stack.innerHTML='Update Store Link (URL 404)';
             }
           } else if(h.store_url && h.store_ok===true){
             card.classList.add("store-live");
@@ -494,6 +503,7 @@
           return score(b) - score(a);
         });
         cardsToSort.forEach(c => container.appendChild(c));
+        window.lucide && lucide.createIcons();
       }catch(e){ /* silent */ }
     }
     window.runHealthCheck = runHealthCheck;
