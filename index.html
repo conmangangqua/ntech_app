@@ -141,7 +141,7 @@
       margin-left: 1.25rem;
       flex-grow: 1;
     }
-    .app-badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; overflow: hidden; margin-top: 4px; }
+    .app-badge-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
 
     .app-title {
       font-size: 1.4rem;
@@ -602,7 +602,8 @@
           badge.className = "ads-badge " + (a.has_ads ? "has-ads" : "no-ads");
           badge.style.display = "inline-flex";
           if(a.has_ads){
-            const sdks = (a.ads||[]).join('+');
+            const abbr = {AdMob:'AdMob',IronSource:'IS',AppLovin:'MAX',Moonvera:'MV',Azura:'AZ','Unity Ads':'Unity'};
+            const sdks = (a.ads||[]).map(s=>abbr[s]||s).join('+');
             badge.innerHTML = '<i data-lucide="megaphone"></i>'+sdks;
           } else {
             badge.innerHTML = '<i data-lucide="ban"></i>No Ads';
