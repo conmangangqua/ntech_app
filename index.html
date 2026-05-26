@@ -603,7 +603,7 @@
       if(!allApps.length) return;
       const apps = allApps.filter(a => a.id).slice(0, 50).map(a => ({id: a.id}));
       try{
-        const r = await fetch("https://aab-trigger.vercel.app/api/adscheck", {
+        const r = await fetch("https://aab.tranquilmind.co/api/adscheck", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({apps})
@@ -648,7 +648,7 @@
       runAdsCheck();
       if(localStorage.getItem("aab_authed")!=="1"){ clearHealthUI(); return; }
       try{
-        const r = await fetch("https://aab-trigger.vercel.app/api/healthbulk", {
+        const r = await fetch("https://aab.tranquilmind.co/api/healthbulk", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({apps})
@@ -742,7 +742,7 @@
     </div>
   </div>
   <script>
-    const BUILD_API = "https://aab-trigger.vercel.app";
+    const BUILD_API = "https://aab.tranquilmind.co";
     let bmAppId = "";
     const $ = (id) => document.getElementById(id);
     async function openBuildModal(appId, appName) {
@@ -825,7 +825,7 @@
     </div>
   </div></div>
   <script>(function(){
-    var API="https://aab-trigger.vercel.app", KEY="aab_authed";
+    var API="https://aab.tranquilmind.co", KEY="aab_authed";
     var b=document.body,
         btn=document.getElementById("aablBtn"),
         ov=document.getElementById("aablOv"),
@@ -931,7 +931,7 @@
     </div>
   </div></div>
   <script>(function(){
-    var API="https://aab-trigger.vercel.app", appId="";
+    var API="https://aab.tranquilmind.co", appId="";
     var ov=document.getElementById("vdOv"),appEl=document.getElementById("vdApp"),
         platEl=document.getElementById("vdPlat"),
         fieldsEl=document.getElementById("vdFields"),
@@ -1139,7 +1139,7 @@
     body.aab-authed .btn-as{display:flex!important}
   </style>
   <script>(function(){
-    var API="https://aab-trigger.vercel.app";
+    var API="https://aab.tranquilmind.co";
     window.dlAssets=async function(id,nm,btn){
       var old=btn.innerHTML; btn.disabled=true; btn.innerHTML="⏳ Đang tải asset…";
       try{
@@ -1189,7 +1189,7 @@
     <div id="stAct"><button type="button" class="st-cancel" onclick="stClose()">Huỷ</button><button type="button" class="st-ok" id="stOk" onclick="stSubmit()">Lưu</button></div>
   </div></div>
   <script>(function(){
-    var API="https://aab-trigger.vercel.app", appId="";
+    var API="https://aab.tranquilmind.co", appId="";
     function repo(){
       var im=document.querySelector('img[src*="github.com/conmangangqua/"]');
       var m=im&&im.src&&im.src.match(/conmangangqua\/([A-Za-z0-9_-]+)/);
@@ -1210,7 +1210,7 @@
       msg.textContent="⏳ Đang dò package…";
       document.getElementById('stOv').classList.add('open');
       try{
-        var r=await fetch("https://aab-trigger.vercel.app/api/package?app_id="+encodeURIComponent(id));
+        var r=await fetch("https://aab.tranquilmind.co/api/package?app_id="+encodeURIComponent(id));
         var d=await r.json();
         if(d.suggest_url){
           urlIn.value=d.suggest_url;
