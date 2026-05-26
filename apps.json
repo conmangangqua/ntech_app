@@ -70,9 +70,9 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/veilo_browser.aab"
       },
       "versions": {
-        "dev": "1.0.0+26052601",
-        "prod": "1.0.0+26052601",
-        "aab": "1.0.0+26052001"
+        "dev": "1.0.0+26052602",
+        "prod": "1.0.0+26052602",
+        "aab": "1.0.0+26052602"
       },
       "store": ""
     }
