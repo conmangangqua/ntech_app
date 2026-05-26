@@ -13,13 +13,13 @@
   <style>
     /* CSS Tối ưu Hóa chuẩn Web UI/UX Pro Max */
     :root {
-      --bg-surface: #0f172a; /* Slate 900 */
-      --bg-card: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity for glassmorphism */
-      --border-card: rgba(255, 255, 255, 0.1);
-      --text-main: #f8fafc; /* Slate 50 */
-      --text-muted: #94a3b8; /* Slate 400 */
-      --accent-blue: #3b82f6; /* Blue 500 */
-      --accent-blue-hover: #2563eb; /* Blue 600 */
+      --bg-surface: #f8fafc; /* Light slate 50 */
+      --bg-card: rgba(255, 255, 255, 0.85); /* White glass */
+      --border-card: rgba(99, 102, 241, 0.12); /* Indigo border */
+      --text-main: #0f172a; /* Slate 900 */
+      --text-muted: #64748b; /* Slate 500 */
+      --accent-blue: #6366f1; /* Indigo 500 - brand primary */
+      --accent-blue-hover: #4f46e5; /* Indigo 600 */
       --accent-green: #10b981;
       --accent-green-hover: #059669;
       --accent-orange: #f59e0b;
@@ -36,8 +36,8 @@
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-surface);
-      background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
-                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
+      background-image: radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 45%),
+                        radial-gradient(circle at bottom left, rgba(167, 139, 250, 0.10), transparent 45%);
       color: var(--text-main);
       line-height: 1.6;
       min-height: 100vh;
@@ -63,7 +63,7 @@
       font-weight: 800;
       letter-spacing: -0.025em;
       margin-bottom: 0.75rem;
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -93,14 +93,14 @@
       padding: 2rem;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
       transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
       animation: fadeInUp 0.5s ease-out both;
     }
 
     .app-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15), 0 0 0 1px rgba(99, 102, 241, 0.18);
     }
 
     /* Tạo dải độ lùi cho animation card */
@@ -122,8 +122,8 @@
       flex-shrink: 0;
       border-radius: 1.2rem;
       overflow: hidden;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-      background: #1e293b;
+      box-shadow: 0 8px 16px rgba(99, 102, 241, 0.18);
+      background: #f1f5f9;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -194,10 +194,11 @@
 
     .feature-tag {
       font-size: 0.75rem;
-      background: rgba(255, 255, 255, 0.05);
-      color: #cbd5e1;
+      background: rgba(99, 102, 241, 0.08);
+      color: #475569;
       padding: 0.3rem 0.75rem;
       border-radius: 9999px;
+      border: 1px solid rgba(99, 102, 241, 0.12);
     }
 
     /* Các Nút Bấm chuẩn Priority 1 */
@@ -226,7 +227,7 @@
     
     /* Hỗ trợ bàn phím Focus - Tiêu chuẩn Phản bồi số 1 */
     .btn:focus-visible {
-      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
     }
 
     .btn:active {
@@ -262,7 +263,8 @@
       padding: 3rem;
       background: var(--bg-card);
       border-radius: 1.25rem;
-      border: 1px dashed rgba(255,255,255,0.2);
+      border: 1px dashed rgba(99, 102, 241, 0.25);
+      color: var(--text-muted);
     }
 
     @keyframes fadeInUp {
@@ -276,8 +278,8 @@
 
   </style>
   <style>/* AAB_TRIGGER_INJECTED */
-    .btn-build{grid-column:span 2;background:#0f172a;color:#fff;border:1px solid #0f172a;cursor:pointer;font-family:inherit}
-    .btn-build:hover{background:#1e293b}
+    .btn-build{grid-column:span 2;background:#312e81;color:#fff;border:1px solid #312e81;cursor:pointer;font-family:inherit}
+    .btn-build:hover{background:#3730a3}
     .btn-store{grid-column:span 2;background:#16a34a;color:#fff;border:1px solid #16a34a;text-decoration:none}
     .btn-store:hover{background:#15803d}
     .aab-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:99999;padding:20px}
@@ -537,7 +539,7 @@
             <article class="app-card" data-app-id="${app.id}">
               <div class="card-header">
                 <div class="app-icon">
-                  ${iconSrc ? `<img src="${iconSrc}" alt="Icon ${app.name}" width="80" height="80" onerror="this.style.display='none'">` : '<div style="width:100%;height:100%;background:linear-gradient(135deg,#1e293b,#0f172a);"></div>'}
+                  ${iconSrc ? `<img src="${iconSrc}" alt="Icon ${app.name}" width="80" height="80" onerror="this.style.display='none'">` : '<div style="width:100%;height:100%;background:linear-gradient(135deg,#ede9fe,#e0e7ff);"></div>'}
                 </div>
                 <div class="app-title-group">
                   <h2 class="app-title">${app.name || "App Name"}</h2>
@@ -785,7 +787,7 @@
   <style>/* AAB_LOGIN */
     .btn-build{display:none!important}
     body.aab-authed .btn-build{display:flex!important}
-    #aablBtn{position:fixed;right:16px;bottom:16px;z-index:100000;background:#0f172a;color:#fff;border:none;border-radius:999px;padding:12px 18px;font:600 14px/1 system-ui,-apple-system,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer}
+    #aablBtn{position:fixed;right:16px;bottom:16px;z-index:100000;background:#312e81;color:#fff;border:none;border-radius:999px;padding:12px 18px;font:600 14px/1 system-ui,-apple-system,sans-serif;box-shadow:0 8px 24px rgba(99,102,241,.35);cursor:pointer}
     #aablOv{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:100001;padding:20px}
     #aablOv.open{display:flex}
     #aablMd{background:#fff;border-radius:20px;padding:26px 22px;width:100%;max-width:340px;box-shadow:0 30px 80px rgba(0,0,0,.3);font-family:system-ui,-apple-system,sans-serif}
