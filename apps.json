@@ -77,7 +77,7 @@
     {
       "id": "veilo_browser",
       "name": "Veilo Browser",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
