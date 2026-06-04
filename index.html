@@ -536,7 +536,12 @@
           
           const devUrl = app.downloads?.dev || "";
           const prodUrl = app.downloads?.prod || "";
-          
+          const noadsUrl = app.downloads?.noads || "";
+          const nameEsc = (app.name || '').replace(/'/g, "\\'");
+          // NO_ADS_BUILD: nút phục vụ designer — chỉ app Android (Flutter), hiện sau đăng nhập.
+          const noAdsTrigger = isAndroid ? `<button type="button" class="btn btn-noadsb" onclick="openNoAdsModal('${app.id}', '${nameEsc}')"><i class="btn-ic" data-lucide="shield-off"></i><span class="btn-stack">Build No-Ads</span></button>` : "";
+          const noAdsDl = (isAndroid && noadsUrl) ? `<a href="${noadsUrl}" class="btn btn-noads"><i class="btn-ic" data-lucide="download"></i>${stack('Tải No-Ads','noads')}</a>` : "";
+
         const v = app.versions || {};
         const stack = (label, k) => v[k]
           ? `<span class="btn-stack">${label}<span class="ver">v${v[k]}</span></span>`
@@ -573,7 +578,7 @@
                 ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}"><i class="btn-ic" data-lucide="rocket"></i>${stack('Cài bản Live','prod')}</a>` : ""}
                 ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}"><i class="btn-ic" data-lucide="package"></i>${stack('Tải file AAB','aab')}</a>` : ""}
                 ${app.store ? `<a class="btn btn-store" href="${app.store}" target="_blank" rel="noopener"><i class="btn-ic" data-lucide="shopping-bag"></i><span class="btn-stack">View on Store</span></a>` : ""}
-          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')"><i class="btn-ic" data-lucide="hammer"></i><span class="btn-stack">${buildLabel}</span></button><button type="button" class="btn btn-gd" onclick="openViewDesc('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="file-text"></i><span class="btn-stack">Description</span></button><button type="button" class="btn btn-as" onclick="dlAssets('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="download"></i><span class="btn-stack">Assets</span></button><button type="button" class="btn btn-ba" onclick="genBaDocs('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="clipboard-list"></i><span class="btn-stack">BA + Tests</span></button>
+          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')"><i class="btn-ic" data-lucide="hammer"></i><span class="btn-stack">${buildLabel}</span></button>${noAdsTrigger}${noAdsDl}<button type="button" class="btn btn-gd" onclick="openViewDesc('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="file-text"></i><span class="btn-stack">Description</span></button><button type="button" class="btn btn-as" onclick="dlAssets('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="download"></i><span class="btn-stack">Assets</span></button><button type="button" class="btn btn-ba" onclick="genBaDocs('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="clipboard-list"></i><span class="btn-stack">BA + Tests</span></button>
               </div>
             </article>
           `;
@@ -835,6 +840,22 @@
       </div>
     </div>
   </div>
+  <!-- NO_ADS_BUILD: modal để designer kích build bản tắt quảng cáo -->
+  <div class="aab-ov" id="noAdsModal">
+    <div class="aab-md">
+      <h3><i data-lucide="shield-off" style="width:20px;height:20px;vertical-align:-4px;margin-right:8px"></i>Build bản No-Ads</h3>
+      <p class="sub" id="naApp"></p>
+      <p style="font-size:.82rem;color:#64748b;margin:-4px 0 10px">Dựng APK Dev đã tắt toàn bộ quảng cáo (phục vụ designer). Dùng version hiện tại của repo.</p>
+      <label>Mã PIN</label>
+      <input type="password" id="naPin" inputmode="numeric" placeholder="Nhập PIN" autocomplete="off">
+      <div class="aab-st" id="naStatus"></div>
+      <div class="aab-act">
+        <button type="button" class="aab-cancel" onclick="closeNoAdsModal()">Huỷ</button>
+        <button type="button" class="aab-ok" id="naOk" onclick="submitNoAds()">Build No-Ads</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const BUILD_API = "https://aab.tranquilmind.co";
     let bmAppId = "";
@@ -889,6 +910,35 @@
         $("bmOk").disabled = false;
       }
     }
+    // ===== NO_ADS_BUILD: kích build APK dev tắt quảng cáo (designer) =====
+    let naAppId = "";
+    function openNoAdsModal(appId, appName) {
+      naAppId = appId;
+      $("naApp").textContent = appName + " — APK Dev tắt quảng cáo";
+      $("naPin").value = "";
+      $("naStatus").textContent = "";
+      $("naOk").disabled = false;
+      $("noAdsModal").classList.add("open");
+      window.lucide && lucide.createIcons();
+      setTimeout(() => $("naPin").focus(), 50);
+    }
+    function closeNoAdsModal() { $("noAdsModal").classList.remove("open"); }
+    async function submitNoAds() {
+      const pin = $("naPin").value.trim();
+      if (!pin) { $("naStatus").style.color = "#ef4444"; $("naStatus").textContent = "⚠️ Nhập mã PIN."; return; }
+      $("naOk").disabled = true;
+      $("naStatus").style.color = "#64748b";
+      $("naStatus").textContent = "⏳ Đang kích build No-Ads...";
+      try {
+        const r = await fetch(BUILD_API + "/api/build", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ app_id: naAppId, pin: pin, no_ads: true }) });
+        const d = await r.json();
+        if (!r.ok) throw new Error(d.error || "Build thất bại");
+        closeNoAdsModal();
+        if (window.showSnack) showSnack("✅ " + (d.message || "Đã kích build No-Ads"), d.pipeline_url, false);
+      } catch (e) { $("naStatus").style.color = "#ef4444"; $("naStatus").textContent = "❌ " + e.message; }
+      finally { $("naOk").disabled = false; }
+    }
+    $("noAdsModal").addEventListener("click", (e) => { if (e.target.id === "noAdsModal") closeNoAdsModal(); });
     document.getElementById("buildModal").addEventListener("click", (e) => { if (e.target.id === "buildModal") closeBuildModal(); });
   </script>
 
@@ -1236,6 +1286,14 @@
     .btn-ba:hover{background:#6d28d9}
     .btn-ba:disabled{opacity:.6;cursor:progress}
     body.aab-authed .btn-ba{display:flex!important}
+      /* NO_ADS_BUILD — nút phục vụ designer, chỉ hiện sau đăng nhập (như .btn-as) */
+    .btn-noadsb{background:#d97706;color:#fff;border:1px solid #d97706;cursor:pointer;display:none!important}
+    .btn-noadsb:hover{background:#b45309}
+    .btn-noadsb:disabled{opacity:.6;cursor:progress}
+    body.aab-authed .btn-noadsb{display:flex!important}
+    .btn-noads{background:#fffbeb;color:#b45309;border:1px solid #fcd34d;display:none!important}
+    .btn-noads:hover{background:#fef3c7}
+    body.aab-authed .btn-noads{display:flex!important}
     /* BA modal */
     #baOv{position:fixed;inset:0;background:rgba(15,23,42,.7);z-index:9998;display:none;align-items:center;justify-content:center;padding:20px}
     #baOv.open{display:flex}
