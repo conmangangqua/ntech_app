@@ -39,7 +39,7 @@
     {
       "id": "sonic_cleaner",
       "name": "Sonic Cleaner",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -49,7 +49,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sonic_cleaner.aab"
       },
       "versions": {
-        "dev": "1.0.1+26052001",
+        "dev": "1.0.0+1",
         "prod": "1.0.1+26052001",
         "aab": "1.0.1+26052001"
       },
