@@ -585,14 +585,33 @@
           container.insertAdjacentHTML("beforeend", html);
         });
         window.lucide && lucide.createIcons();
-        runHealthCheck(); enrichCardDescriptions();
+        runHealthCheck(); enrichCardDescriptions(); autoOpenFromUrl();
       })
       .catch(err => {
         document.getElementById("appContainer").innerHTML = '<div class="system-msg" style="color:var(--accent-orange)"><b>❌ Lỗi Hệ Thống:</b> Không thể tải danh sách ứng dụng. Vui lòng F5 (tải lại trang).</div>';
         console.error("Lỗi Fetch JSON:", err);
       });
 
-    function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];}); }
+    function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}
+
+    function autoOpenFromUrl(){
+      try{
+        var q = new URLSearchParams(location.search);
+        var slug = (q.get("app")||"").trim();
+        var action = (q.get("open")||"").trim().toLowerCase();
+        if(!slug || !action) return;
+        var app = (allApps||[]).find(function(a){ return a.id === slug; });
+        if(!app) return;
+        var nm = app.name || slug;
+        setTimeout(function(){
+          if(action === "desc" && window.openViewDesc) openViewDesc(slug, nm);
+          else if(action === "ba" && window.genBaDocs)
+            genBaDocs(slug, nm, document.querySelector("[data-app-id='"+slug+"'] .btn-ba"));
+          else if(action === "ss" && window.openShots) openShots(slug, nm);
+        }, 100);
+      }catch(e){}
+    }
+)[c];}); }
     function urlRow(label, url, ok){
       if(!url) return '<div style="font-size:.7rem;color:#94a3b8">'+label+': <i>(trống)</i></div>';
       const okBadge = ok===true ? '<span style="color:#16a34a;font-weight:700">✓</span>'
