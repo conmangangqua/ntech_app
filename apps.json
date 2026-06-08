@@ -32,7 +32,6 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/rollicon_3d.aab"
       },
       "versions": {
-        "dev": "1.0.1+26060401",
         "prod": "1.0.1+26060401",
         "aab": "1.0.1+26052501"
       },
@@ -69,11 +68,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sticker_lab.aab"
       },
-      "versions": {
-        "dev": "1.0.1+26052601",
-        "prod": "1.0.1+26052601",
-        "aab": "1.0.1+26052601"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab"
     },
     {
