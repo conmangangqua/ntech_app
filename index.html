@@ -592,7 +592,7 @@
         console.error("Lỗi Fetch JSON:", err);
       });
 
-    function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}
+    function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];}); }
 
     function autoOpenFromUrl(){
       try{
@@ -611,7 +611,6 @@
         }, 100);
       }catch(e){}
     }
-)[c];}); }
     function urlRow(label, url, ok){
       if(!url) return '<div style="font-size:.7rem;color:#94a3b8">'+label+': <i>(trống)</i></div>';
       const okBadge = ok===true ? '<span style="color:#16a34a;font-weight:700">✓</span>'
