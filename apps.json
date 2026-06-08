@@ -22,7 +22,7 @@
     {
       "id": "rollicon_3d",
       "name": "Rollicon 3d",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -47,13 +47,12 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk",
-        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sonic_cleaner.aab"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk"
       },
       "versions": {
         "dev": "1.0.2+26060801",
         "prod": "1.0.0+1",
-        "aab": "1.0.1+26052001"
+        "aab": "1.0.2+26060801"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner"
     },
@@ -89,7 +88,6 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/veilo_browser.aab"
       },
       "versions": {
-        "dev": "1.0.0+26060201",
         "prod": "1.0.0+26060201",
         "aab": "1.0.0+26060201"
       },
