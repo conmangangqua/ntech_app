@@ -47,7 +47,8 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sonic_cleaner_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sonic_cleaner.aab"
       },
       "versions": {
         "dev": "1.0.2+26060801",
@@ -88,6 +89,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/veilo_browser.aab"
       },
       "versions": {
+        "dev": "1.0.0+26060201",
         "prod": "1.0.0+26060201",
         "aab": "1.0.0+26060201"
       },
