@@ -22,7 +22,7 @@
     {
       "id": "rollicon_3d",
       "name": "Rollicon 3d",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -33,7 +33,7 @@
       },
       "versions": {
         "dev": "1.0.1+26061001",
-        "prod": "1.0.1+26060401",
+        "prod": "1.0.1+26061001",
         "aab": "1.0.1+26061001"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon"
