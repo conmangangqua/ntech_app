@@ -91,7 +91,7 @@
       "versions": {
         "dev": "1.0.0+26060201",
         "prod": "1.0.0+26060201",
-        "aab": "1.0.0+26061001"
+        "aab": "1.0.0+26061002"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser"
     }
