@@ -60,18 +60,17 @@
     {
       "id": "sticker_lab",
       "name": "Sticker Lab",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sticker_lab.aab"
       },
       "versions": {
         "dev": "1.0.1+26061002",
-        "prod": "1.0.1+26061001",
+        "prod": "1.0.1+26061002",
         "aab": "1.0.1+26061002"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab"
