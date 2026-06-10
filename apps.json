@@ -3,13 +3,12 @@
     {
       "id": "aurora_drama",
       "name": "Aurora Drama",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/aurora_drama_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/aurora_drama_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/aurora_drama.aab"
       },
       "versions": {
@@ -34,7 +33,7 @@
       "versions": {
         "dev": "1.0.1+26061001",
         "prod": "1.0.1+26061001",
-        "aab": "1.0.1+26061001"
+        "aab": "1.0.1+26061002"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon"
     },
