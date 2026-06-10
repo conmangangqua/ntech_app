@@ -21,13 +21,12 @@
     {
       "id": "rollicon_3d",
       "name": "Rollicon 3d",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/rollicon_3d.aab"
       },
       "versions": {
