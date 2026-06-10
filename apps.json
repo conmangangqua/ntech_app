@@ -3,12 +3,11 @@
     {
       "id": "aurora_drama",
       "name": "Aurora Drama",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/aurora_drama_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
-        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/aurora_drama_dev.apk",
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/aurora_drama.aab"
       },
@@ -22,7 +21,7 @@
     {
       "id": "rollicon_3d",
       "name": "Rollicon 3d",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
