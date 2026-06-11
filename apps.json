@@ -3,7 +3,7 @@
     {
       "id": "aurora_drama",
       "name": "Aurora Drama",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/aurora_drama_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -60,7 +60,7 @@
     {
       "id": "sticker_lab",
       "name": "Sticker Lab",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/sticker_lab_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -70,7 +70,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sticker_lab.aab"
       },
       "versions": {
-        "dev": "1.0.2+26061101",
+        "dev": "1.0.2+26061102",
         "prod": "1.0.2+26061101",
         "aab": "1.0.2+26061101"
       },
