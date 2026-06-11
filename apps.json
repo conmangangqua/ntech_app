@@ -28,6 +28,7 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/rollicon_3d_dev.apk",
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/rollicon_3d.aab"
       },
       "versions": {
@@ -78,7 +79,7 @@
     {
       "id": "veilo_browser",
       "name": "Veilo Browser",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -89,7 +90,7 @@
       },
       "versions": {
         "dev": "1.0.1+26061101",
-        "prod": "1.0.0+26060201",
+        "prod": "1.0.1+26061101",
         "aab": "1.0.1+26061101"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser"
