@@ -20,6 +20,21 @@
       "store": ""
     },
     {
+      "id": "idol_mirage",
+      "name": "Idol Mirage",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/idol_mirage_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/idol_mirage_dev.apk"
+      },
+      "versions": {
+        "dev": "1.0.0+1"
+      },
+      "store": ""
+    },
+    {
       "id": "rollicon_3d",
       "name": "Rollicon 3d",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
