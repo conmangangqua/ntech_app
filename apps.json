@@ -28,11 +28,13 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/idol_mirage_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_prod.apk"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/idol_mirage.aab"
       },
       "versions": {
         "dev": "1.0.0+1",
-        "prod": "1.0.0+1"
+        "prod": "1.0.0+1",
+        "aab": "1.0.0+1"
       },
       "store": ""
     },
