@@ -41,7 +41,7 @@
     {
       "id": "mochi_chat",
       "name": "Mochi Chat",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/mochi_chat_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/mochi_chat_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
