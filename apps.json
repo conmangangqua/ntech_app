@@ -39,6 +39,21 @@
       "store": ""
     },
     {
+      "id": "kairo_chat",
+      "name": "Kairo Chat",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/kairo_chat_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/kairo_chat_dev.apk"
+      },
+      "versions": {
+        "dev": "1.0.0+1"
+      },
+      "store": ""
+    },
+    {
       "id": "mochi_chat",
       "name": "Mochi Chat",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/mochi_chat_icon.png",
