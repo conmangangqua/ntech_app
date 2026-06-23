@@ -17,7 +17,9 @@
         "prod": "1.0.0+26062001",
         "aab": "1.0.0+26062001"
       },
-      "store": ""
+      "store": "",
+      "category": "Entertainment",
+      "category_source": "store"
     },
     {
       "id": "idol_mirage",
@@ -36,7 +38,9 @@
         "prod": "1.0.0+26062004",
         "aab": "1.0.0+26062004"
       },
-      "store": ""
+      "store": "",
+      "category": "Entertainment",
+      "category_source": "store"
     },
     {
       "id": "kairo_chat",
@@ -53,7 +57,9 @@
         "dev": "1.0.0+1",
         "prod": "1.0.0+1"
       },
-      "store": ""
+      "store": "",
+      "category": "Communication",
+      "category_source": "store"
     },
     {
       "id": "mochi_chat",
@@ -70,7 +76,9 @@
         "dev": "1.0.0+1",
         "prod": "1.0.0+1"
       },
-      "store": ""
+      "store": "",
+      "category": "Communication",
+      "category_source": "store"
     },
     {
       "id": "rollicon_3d",
@@ -89,7 +97,9 @@
         "prod": "1.0.2+26061102",
         "aab": "1.0.2+26061102"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon"
+      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
+      "category": "Personalization",
+      "category_source": "store"
     },
     {
       "id": "sonic_cleaner",
@@ -108,7 +118,9 @@
         "prod": "1.0.3+26060901",
         "aab": "1.0.3+26061002"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner"
+      "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner",
+      "category": "Tools",
+      "category_source": "store"
     },
     {
       "id": "sticker_lab",
@@ -127,7 +139,9 @@
         "prod": "1.0.2+26061102",
         "aab": "1.0.2+26061102"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab"
+      "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
+      "category": "Tools",
+      "category_source": "store"
     },
     {
       "id": "veilo_browser",
@@ -146,7 +160,9 @@
         "prod": "1.0.2+26061501",
         "aab": "1.0.2+26061501"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser"
+      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
+      "category": "Tools",
+      "category_source": "store"
     }
   ]
 }
