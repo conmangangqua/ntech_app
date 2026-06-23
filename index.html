@@ -520,7 +520,7 @@
     // Logic Javascript không đổi
     let allApps = [];
     Promise.all([
-      fetch("apps.json").then(r => r.json()).catch(()=>({apps:[]})),
+      fetch("apps.json?t=" + Date.now()).then(r => r.json()).catch(()=>({apps:[]})),
       fetch("versions.json").then(r => r.ok ? r.json() : {apps:{}}).catch(()=>({apps:{}}))
     ]).then(([data, v]) => {
         window.__sv = (v && v.apps) || {};
