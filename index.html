@@ -570,7 +570,7 @@
                 </div>
                 <div class="app-title-group">
                   <h2 class="app-title">${app.name || "App Name"}</h2>
-                  <div class="app-badge-row"><span class="platform-badge ${isIOS ? 'ios' : 'android'}">OS: ${app.platform || "Android"}</span><span class="ads-badge" data-ads="loading" style="display:none"></span><span class="health-badge" data-health="loading" style="display:none"></span></div>
+                  <div class="app-badge-row"><span class="platform-badge ${isIOS ? 'ios' : 'android'}">OS: ${app.platform || "Android"}</span>${app.category ? `<span class="pill-category cat-src-${app.category_source||'store'}" title="Nguồn category: ${app.category_source==='override'?'Override tay':app.category_source==='ai'?'AI phân loại':app.category_source==='gitlab'?'Fallback subgroup':'Store category'}"><i data-lucide="tag"></i>${app.category}</span>` : ''}<span class="ads-badge" data-ads="loading" style="display:none"></span><span class="health-badge" data-health="loading" style="display:none"></span></div>
                 </div>
               </div>
               
@@ -1458,6 +1458,12 @@
     .st-cancel{background:#f1f5f9;color:#475569}
     .st-ok{background:#2563eb;color:#fff}
     .st-ok:disabled{opacity:.55;cursor:not-allowed}
+    /* ===== CATEGORY pill (ntech: app-badge-row đã wrap sẵn) ===== */
+    .pill-category { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: #fff; }
+    .pill-category.cat-src-override { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+    .pill-category.cat-src-ai { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+    .pill-category.cat-src-gitlab { background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%); }
+    .pill-category i, .pill-category svg { width: 11px; height: 11px; stroke-width: 2.4; }
   </style>
   <div id="stOv"><div id="stMd">
     <h3><i data-lucide="plus" style="width:20px;height:20px;vertical-align:-4px;margin-right:8px"></i>Add Store Link</h3>
