@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-12T21:41:37",
+  "generated_at": "2026-06-24T22:38:14",
   "apps": {
     "rollicon_3d": {
-      "updated_on": "Jun 11, 2026",
-      "updated_ts": 1781196273,
+      "updated_on": "Jun 24, 2026",
+      "updated_ts": 1782234166,
       "package_id": "com.tranquiltmt.rollicon"
     },
     "sonic_cleaner": {
@@ -17,8 +17,8 @@
       "package_id": "com.tranquilpartner.stickerlab"
     },
     "veilo_browser": {
-      "updated_on": "Jun 11, 2026",
-      "updated_ts": 1781195544,
+      "updated_on": "Jun 15, 2026",
+      "updated_ts": 1781507640,
       "package_id": "com.tranquiltmt.veilo.browser"
     }
   }
