@@ -293,6 +293,31 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Sếp 2026-06-26: search + category filter (như các hub khác) */
+    .search-section { max-width: 680px; margin: 0 auto 26px; padding: 0 16px; }
+    .search-wrapper { position: relative; display: flex; align-items: center; }
+    .search-wrapper .search-ic { position: absolute; left: 16px; width: 20px; height: 20px; color: var(--text-muted); pointer-events: none; }
+    #searchInput {
+      width: 100%; padding: 14px 18px 14px 46px; font-family: var(--font-stack); font-size: 1rem;
+      color: var(--text-main); background: var(--bg-card); border: 1.5px solid var(--border-card);
+      border-radius: 14px; outline: none; transition: border-color .18s, box-shadow .18s;
+      backdrop-filter: blur(8px);
+    }
+    #searchInput:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgba(99,102,241,.12); }
+    #searchInput::placeholder { color: var(--text-muted); }
+    .category-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
+    .cat-chip {
+      display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-family: var(--font-stack);
+      font-size: .82rem; font-weight: 600; color: var(--text-muted); background: var(--bg-card);
+      border: 1.5px solid var(--border-card); border-radius: 999px; cursor: pointer;
+      transition: all .15s; white-space: nowrap;
+    }
+    .cat-chip:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+    .cat-chip.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+    .cat-chip .cnt { font-size: .72rem; opacity: .75; font-weight: 700; }
+    .cat-chip.active .cnt { opacity: .9; }
+    .app-card.hidden { display: none !important; }
+
   </style>
   <style>/* AAB_TRIGGER_INJECTED */
     .btn-build{grid-column:span 2;background:#312e81;color:#fff;border:1px solid #312e81;cursor:pointer;font-family:inherit}
@@ -511,6 +536,15 @@
       <p>Lựa chọn phiên bản Test (Dev) hoặc Hoàn thiện (Live) tương ứng với nền tảng thiết bị di động của bạn.</p>
     </header>
 
+    <!-- Sếp 2026-06-26: search + category filter như các hub khác -->
+    <section class="search-section">
+      <div class="search-wrapper">
+        <i data-lucide="search" class="search-ic"></i>
+        <input type="text" id="searchInput" placeholder="Tìm ứng dụng theo tên, mô tả, danh mục..." oninput="filterApps()" autocomplete="off">
+      </div>
+      <div id="categoryChips" class="category-chips"></div>
+    </section>
+
     <main id="appContainer">
       <!-- Dữ liệu JS sẽ đổ bộ vào đây -->
     </main>
@@ -590,6 +624,7 @@
           container.insertAdjacentHTML("beforeend", html);
         });
         window.lucide && lucide.createIcons();
+        buildCategoryChips();
         runHealthCheck(); enrichCardDescriptions(); autoOpenFromUrl();
       })
       .catch(err => {
@@ -598,6 +633,44 @@
       });
 
     function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];}); }
+
+    /* Sếp 2026-06-26: search + category filter (như các hub khác) — ẩn/hiện card,
+       KHÔNG re-render (ntech render inline, giữ nguyên health/sort/enrich logic). */
+    let selectedCategory = "";
+    function buildCategoryChips(){
+      const host = document.getElementById("categoryChips");
+      if(!host) return;
+      const cats = [...new Set((allApps||[]).map(a => a.category).filter(Boolean))].sort();
+      if(!cats.length){ host.innerHTML = ""; return; }
+      const chip = (label, val, cnt) => `<button type="button" class="cat-chip${selectedCategory===val?' active':''}" onclick="selectCategory(this.dataset.cat)" data-cat="${String(val).replace(/"/g,'&quot;')}">${label}${cnt!=null?` <span class="cnt">${cnt}</span>`:''}</button>`;
+      host.innerHTML = chip("Tất cả", "", (allApps||[]).filter(a=>a.category).length)
+        + cats.map(c => chip(c, c, allApps.filter(a=>a.category===c).length)).join("");
+    }
+    function selectCategory(val){ selectedCategory = val; buildCategoryChips(); filterApps(); }
+    function filterApps(){
+      const q = (document.getElementById("searchInput")?.value || "").toLowerCase().trim();
+      let shown = 0;
+      document.querySelectorAll("#appContainer .app-card").forEach(card => {
+        const app = (allApps||[]).find(a => a.id === card.dataset.appId);
+        if(!app){ card.classList.remove("hidden"); return; }
+        const okCat = selectedCategory === "" || app.category === selectedCategory;
+        const hay = ((app.name||"") + " " + (app.description||"") + " " + (app.category||"")).toLowerCase();
+        const okQ = !q || hay.includes(q);
+        const show = okCat && okQ;
+        card.classList.toggle("hidden", !show);
+        if(show) shown++;
+      });
+      let empty = document.getElementById("noResultMsg");
+      if(shown === 0){
+        if(!empty){
+          empty = document.createElement("div");
+          empty.id = "noResultMsg"; empty.className = "system-msg";
+          empty.textContent = "Không tìm thấy ứng dụng phù hợp.";
+          document.getElementById("appContainer").appendChild(empty);
+        }
+        empty.style.display = "";
+      } else if(empty){ empty.style.display = "none"; }
+    }
 
     function autoOpenFromUrl(){
       try{
