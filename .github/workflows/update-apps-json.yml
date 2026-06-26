@@ -265,6 +265,8 @@ jobs:
               base_id = ""
               if name.endswith('_dev_noads.apk'):
                   base_id = name.replace('_dev_noads.apk', '')
+              elif name.endswith('_prod_noads.apk'):
+                  base_id = name.replace('_prod_noads.apk', '')
               elif name.endswith('_dev.apk'):
                   base_id = name.replace('_dev.apk', '')
               elif name.endswith('_prod.apk'):
@@ -284,6 +286,8 @@ jobs:
                   base_id = name.replace('_store.url', '')
               elif name.endswith('_dev_noads.version'):
                   base_id = name.replace('_dev_noads.version', '')
+              elif name.endswith('_prod_noads.version'):
+                  base_id = name.replace('_prod_noads.version', '')
               elif name.endswith('_aab.version'):
                   base_id = name.replace('_aab.version', '')
               elif name.endswith('.version'):
@@ -323,6 +327,10 @@ jobs:
                   if name == f"{app_id}_dev_noads.apk":
                       noads_url = url
                   elif name == f"{app_id}_dev_noads.version":
+                      noads_version_url = url
+                  elif name == f"{app_id}_prod_noads.apk":
+                      noads_url = url
+                  elif name == f"{app_id}_prod_noads.version":
                       noads_version_url = url
                   elif name == f"{app_id}_dev.apk":
                       dev_url = url
