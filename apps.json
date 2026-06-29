@@ -75,7 +75,6 @@
       },
       "versions": {
         "dev": "1.0.3+26062301",
-        "prod": "1.0.3+26062301",
         "aab": "1.0.3+26062301"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
@@ -127,7 +126,7 @@
     {
       "id": "veilo_browser",
       "name": "Veilo Browser",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -138,7 +137,7 @@
       },
       "versions": {
         "dev": "1.0.3+26062901",
-        "prod": "1.0.2+26061501",
+        "prod": "1.0.3+26062901",
         "aab": "1.0.3+26062901"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
