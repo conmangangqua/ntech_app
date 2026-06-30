@@ -24,7 +24,7 @@
     {
       "id": "idol_mirage",
       "name": "Idol Mirage",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/idol_mirage_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -34,7 +34,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/idol_mirage.aab"
       },
       "versions": {
-        "dev": "1.0.1+26062901",
+        "dev": "1.0.1+26063001",
         "prod": "1.0.1+26062901",
         "aab": "1.0.1+26062901"
       },
