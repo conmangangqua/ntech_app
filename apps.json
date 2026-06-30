@@ -18,8 +18,8 @@
         "aab": "1.0.0+26062001"
       },
       "store": "",
-      "category": null,
-      "category_source": null
+      "category": "Streaming",
+      "category_source": "rule"
     },
     {
       "id": "idol_mirage",
@@ -39,8 +39,8 @@
         "aab": "1.0.1+26062901"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
-      "category": null,
-      "category_source": null
+      "category": "Entertainment",
+      "category_source": "store"
     },
     {
       "id": "kairo_chat",
@@ -58,8 +58,8 @@
         "prod": "1.0.0+1"
       },
       "store": "",
-      "category": null,
-      "category_source": null
+      "category": "AI Chat",
+      "category_source": "rule"
     },
     {
       "id": "rollicon_3d",
@@ -79,8 +79,8 @@
         "aab": "1.0.3+26062301"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
-      "category": null,
-      "category_source": null
+      "category": "Personalization",
+      "category_source": "store"
     },
     {
       "id": "sonic_cleaner",
@@ -100,8 +100,8 @@
         "aab": "1.0.3+26061002"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner",
-      "category": null,
-      "category_source": null
+      "category": "Cleaner & Booster",
+      "category_source": "rule"
     },
     {
       "id": "sticker_lab",
@@ -121,13 +121,13 @@
         "aab": "1.0.2+26061102"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
-      "category": null,
-      "category_source": null
+      "category": "Tools",
+      "category_source": "store"
     },
     {
       "id": "veilo_browser",
       "name": "Veilo Browser",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -142,8 +142,8 @@
         "aab": "1.0.3+26062901"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
-      "category": null,
-      "category_source": null
+      "category": "Browser",
+      "category_source": "rule"
     }
   ]
 }
