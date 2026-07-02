@@ -47,6 +47,25 @@
       "store_version": null
     },
     {
+      "id": "iptv_velix",
+      "name": "Iptv Velix",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/iptv_velix_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/iptv_velix_dev.apk"
+      },
+      "versions": {
+        "dev": "0.1.0+1"
+      },
+      "store": "",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
+      "store_version": null
+    },
+    {
       "id": "kairo_chat",
       "name": "Kairo Chat",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_icon.png",
