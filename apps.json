@@ -49,7 +49,7 @@
     {
       "id": "kairo_chat",
       "name": "Kairo Chat",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/kairo_chat_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
