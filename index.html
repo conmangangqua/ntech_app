@@ -5,323 +5,67 @@
   <script>(function(){var c="ntech-app.tranquilmind.co";var h=location.hostname;if(!c||h===c||/^(localhost|127\.0\.0\.1|\[?::1\]?)$/.test(h))return;var p=location.pathname;if(/\.github\.io$/i.test(h)){p=p.replace(/^\/[^\/]+/,'');}if(!p)p='/';location.replace("https://"+c+p+location.search+location.hash);})();</script>
   <!-- END canonical-redirect -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Trung tâm cài đặt Ứng dụng Nội Bộ chuẩn Premium" />
-  <!-- Chống cache triệt để để luôn tải file JSON mới nhất -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>App Release Hub</title>
-  
+  <title>Ntech X Tranquil Mind Studio - Premium App Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* CSS Tối ưu Hóa chuẩn Web UI/UX Pro Max */
     :root {
-      --bg-surface: #f8fafc; /* Light slate 50 */
-      --bg-card: rgba(255, 255, 255, 0.85); /* White glass */
-      --border-card: rgba(99, 102, 241, 0.12); /* Indigo border */
-      --text-main: #0f172a; /* Slate 900 */
-      --text-muted: #64748b; /* Slate 500 */
-      --accent-blue: #6366f1; /* Indigo 500 - brand primary */
-      --accent-blue-hover: #4f46e5; /* Indigo 600 */
-      --accent-green: #10b981;
-      --accent-green-hover: #059669;
-      --accent-orange: #f59e0b;
-      --accent-orange-hover: #d97706;
-      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      --primary: #7c3aed;
+      --primary-glow: rgba(124, 58, 237, 0.2);
+      --secondary: #a78bfa;
+      --bg-main: #f9f7ff;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --text-main: #2e1065;
+      --text-muted: #6d28d9;
+      --glass-border: rgba(124, 58, 237, 0.15);
+      --card-radius: 24px; /* Clean Tech Style */
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-stack);
-      background-color: var(--bg-surface);
-      background-image: radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 45%),
-                        radial-gradient(circle at bottom left, rgba(167, 139, 250, 0.10), transparent 45%);
-      color: var(--text-main);
-      line-height: 1.6;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Container khóa cỡ màn hình khổng lồ, giãn ở mobile */
-    .container {
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-
-    /* Header chuẩn phân tầng thẻ H1 H2 */
-    header {
-      text-align: center;
-      margin-bottom: 3.5rem;
-      animation: fadeInDown 0.6s ease-out;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      margin-bottom: 0.75rem;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 65ch; /* Giới hạn độ dài dòng đọc */
-      margin: 0 auto;
-    }
-
-    /* Grid layout auto-fit */
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    /* Card thiết kế chuẩn Glassmorphism kiểm soát */
-    .app-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
-      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
-      animation: fadeInUp 0.5s ease-out both;
-    }
-
-    .app-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15), 0 0 0 1px rgba(99, 102, 241, 0.18);
-    }
-
-    /* Tạo dải độ lùi cho animation card */
-    .app-card:nth-child(1) { animation-delay: 0.1s; }
-    .app-card:nth-child(2) { animation-delay: 0.2s; }
-    .app-card:nth-child(3) { animation-delay: 0.3s; }
-    .app-card:nth-child(4) { animation-delay: 0.4s; }
-
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Anti-CLS cho hình ảnh (Cố định khung, tỷ lệ 1/1) */
-    .app-icon {
-      width: 80px;
-      height: 80px;
-      flex-shrink: 0;
-      border-radius: 1.2rem;
-      overflow: hidden;
-      box-shadow: 0 8px 16px rgba(99, 102, 241, 0.18);
-      background: #f1f5f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .app-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 1/1; 
-      display: block;
-    }
-
-    .app-title-group {
-      margin-left: 1.25rem;
-      flex-grow: 1;
-    }
-    .app-badge-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
-
-    .app-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 0.25rem;
-      line-height: 1.2;
-    }
-
-    .platform-badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.6rem;
-      border-radius: 9999px;
-    }
-
-    .platform-badge.ios {
-      background-color: rgba(59, 130, 246, 0.2);
-      color: #93c5fd;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    .platform-badge.android {
-      background-color: rgba(16, 185, 129, 0.2);
-      color: #6ee7b7;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-
-    .app-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-main); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+    .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: var(--bg-main); }
+    .blob { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%); border-radius: 50%; animation: drift 30s infinite alternate ease-in-out; }
+    .blob-2 { background: radial-gradient(circle, rgba(167, 139, 250, 0.08) 0%, transparent 70%); width: 700px; height: 700px; right: -5%; top: 5%; animation-duration: 25s; }
+    @keyframes drift { from { transform: translate(-10%, -10%) scale(1); } to { transform: translate(20%, 30%) scale(1.1); } }
+    header { padding: 90px 20px 20px; text-align: center; }
+    header h1 { font-size: clamp(3rem, 10vw, 4.2rem); font-weight: 800; letter-spacing: -0.05em; background: linear-gradient(135deg, var(--text-main) 30%, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .search-section { max-width: 720px; margin: 40px auto 30px; padding: 0 20px; position: sticky; top: 20px; z-index: 100; }
+    .search-wrapper { position: relative; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border: 1.5px solid var(--glass-border); border-radius: 24px; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.08); }
+    .search-wrapper input { width: 100%; background: transparent; border: none; padding: 18px 20px 18px 60px; color: var(--text-main); font-size: 1.05rem; font-weight: 600; outline: none; }
+    .search-wrapper::before { content: '🔍'; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 1.2rem; }
+    main { flex: 1; width: 100%; max-width: 1800px; margin: 0 auto; padding: 20px 40px 100px; }
+    #appContainer { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 40px; }
+    .app-card { background: var(--card-bg); backdrop-filter: blur(20px); border: 2px solid var(--glass-border); border-radius: var(--card-radius); padding: 45px 35px; display: flex; flex-direction: column; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); opacity: 0; transform: translateY(40px); animation: reveal 0.8s forwards; box-shadow: 0 10px 35px rgba(124, 58, 237, 0.05); }
+    .app-card:hover { transform: translateY(-12px); background: #ffffff; border-color: var(--primary); box-shadow: 0 35px 70px -15px rgba(124, 58, 237, 0.15), 0 0 25px var(--primary-glow); }
+    .app-icon-box { width: 100px; height: 100px; margin: 0 auto 30px; border-radius: 40px 10px 40px 10px; padding: 10px; background: #ecfdf5; box-shadow: 0 12px 25px rgba(124, 58, 237, 0.1); display: flex; align-items: center; justify-content: center; }
+    .app-icon { width: 100%; height: 100%; border-radius: 35px 8px 35px 8px; object-fit: cover; }
+    .badge { font-size: 0.8rem; font-weight: 800; padding: 7px 16px; border-radius: 12px; text-transform: uppercase; }
+    .badge.android { background: #d1fae5; color: #6d28d9; border: 1px solid #a7f3d0; }
+    .badge.ios { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .app-title { font-size: 1.7rem; font-weight: 800; text-align: center; margin-bottom: 12px; color: var(--text-main); }
+    .app-desc { font-size: 1rem; color: var(--text-muted); text-align: center; margin-bottom: 35px; flex-grow: 1; font-weight: 500; }
     .app-desc:empty{display:none}
-
-    .feature-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .feature-tag {
-      font-size: 0.75rem;
-      background: rgba(99, 102, 241, 0.08);
-      color: #475569;
-      padding: 0.3rem 0.75rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(99, 102, 241, 0.12);
-    }
-
-    /* Các Nút Bấm — Pastel Pill chuẩn Affica-style */
-    .card-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: auto;
-    }
-
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 48px; /* Tối thiểu chạm cho ngón tay Mobile */
-      padding: 14px 12px;
-      border-radius: 18px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-      transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.25s ease, color 0.2s ease;
-      outline: none;
-    }
-
-    /* Hỗ trợ bàn phím Focus - Tiêu chuẩn Phản bồi số 1 */
-    .btn:focus-visible {
-      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
-    }
-
-    .btn:active {
-      transform: scale(0.97); /* Micro-interaction độ nén nút */
-    }
-
-    /* Pastel: Dev (Test/Beta) — amber */
-    .btn-dev {
-      background: #fef3c7;
-      color: #b45309;
-      border: 1px solid #fde68a;
-    }
-    .btn-dev:hover {
-      background: #fde68a;
-      color: #92400e;
-    }
-    /* Pastel: Prod (Live) — green */
-    .btn-prod {
-      background: #dcfce7;
-      color: #15803d;
-      border: 1px solid #bbf7d0;
-    }
-    .btn-prod:hover {
-      background: #bbf7d0;
-      color: #166534;
-    }
-    /* Pastel: AAB (Download) — violet (ntech brand) */
-    .btn-aab {
-      grid-column: span 2;
-      background: #ede9fe;
-      color: #6d28d9;
-      border: 1px solid #ddd6fe;
-    }
-    .btn-aab:hover {
-      background: #ddd6fe;
-      color: #5b21b6;
-    }
-
+    .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .btn { padding: 18px 12px; border-radius: 18px; font-weight: 700; font-size: 0.9rem; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+    .btn:active { transform: scale(0.92); }
+    .btn-dev { background: #ecfdf5; color: #7c3aed; border: 1px solid #a7f3d0; }
+    .btn-live { background: #a78bfa; color: #fff; border: 1px solid #a78bfa; }
+    .btn-full { grid-column: span 2; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .btn-full:hover { background: var(--primary); color: #fff; }
 
     .btn-stack { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.1; }
     .btn-stack .ver { font-size: 10px; font-weight: 600; opacity: 0.75; letter-spacing: 0; }
-    /* Skeleton Placeholder hoặc Báo Lỗi */
-    .system-msg {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 3rem;
-      background: var(--bg-card);
-      border-radius: 1.25rem;
-      border: 1px dashed rgba(99, 102, 241, 0.25);
-      color: var(--text-muted);
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Sếp 2026-06-26: search + category filter (như các hub khác) */
-    .search-section { max-width: 680px; margin: 0 auto 26px; padding: 0 16px; }
-    .search-wrapper { position: relative; display: flex; align-items: center; }
-    .search-wrapper .search-ic { position: absolute; left: 16px; width: 20px; height: 20px; color: var(--text-muted); pointer-events: none; }
-    #searchInput {
-      width: 100%; padding: 14px 18px 14px 46px; font-family: var(--font-stack); font-size: 1rem;
-      color: var(--text-main); background: var(--bg-card); border: 1.5px solid var(--border-card);
-      border-radius: 14px; outline: none; transition: border-color .18s, box-shadow .18s;
-      backdrop-filter: blur(8px);
-    }
-    #searchInput:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgba(99,102,241,.12); }
-    #searchInput::placeholder { color: var(--text-muted); }
-    .category-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
-    .cat-chip {
-      display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-family: var(--font-stack);
-      font-size: .82rem; font-weight: 600; color: var(--text-muted); background: var(--bg-card);
-      border: 1.5px solid var(--border-card); border-radius: 999px; cursor: pointer;
-      transition: all .15s; white-space: nowrap;
-    }
-    .cat-chip:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
-    .cat-chip.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
-    .cat-chip .cnt { font-size: .72rem; opacity: .75; font-weight: 700; }
-    .cat-chip.active .cnt { opacity: .9; }
-    .app-card.hidden { display: none !important; }
-
+    footer { padding: 80px 20px; text-align: center; color: var(--text-muted); font-size: 0.95rem; font-weight: 600; border-top: 1px solid var(--glass-border); }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 768px) { #appContainer { grid-template-columns: 1fr; } .search-section { top: 10px; } }
   </style>
   <style>/* AAB_TRIGGER_INJECTED */
-    .btn-build{grid-column:span 2;background:#312e81;color:#fff;border:1px solid #312e81;cursor:pointer;font-family:inherit}
-    .btn-build:hover{background:#3730a3}
+    .btn-build{grid-column:span 2;background:#0f172a;color:#fff;border:1px solid #0f172a;cursor:pointer;font-family:inherit}
+    .btn-build:hover{background:#1e293b}
     .btn-store{grid-column:span 2;background:#16a34a;color:#fff;border:1px solid #16a34a;text-decoration:none}
     .btn-store:hover{background:#15803d}
     .aab-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:99999;padding:20px}
@@ -335,10 +79,10 @@
     .aab-act{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
     .aab-act button{padding:13px;border-radius:14px;font-weight:700;font-size:.9rem;border:none;cursor:pointer;font-family:inherit}
     .aab-cancel{background:#f1f5f9;color:#475569}
-    .aab-ok{background:#059669;color:#fff}
+    .aab-ok{background:#7c3aed;color:#fff}
     .aab-ok:disabled{opacity:.55;cursor:not-allowed}
     .aab-st{margin-top:14px;font-size:.83rem;font-weight:600;text-align:center;min-height:18px;word-break:break-word;color:#64748b}
-    .aab-st a{color:#059669;font-weight:800}
+    .aab-st a{color:#7c3aed;font-weight:800}
     /* STORE_META_INJECTED */
     .store-meta{margin-top:10px;text-align:center;font-size:.78rem;font-weight:600;color:#64748b;letter-spacing:.02em}
     .store-meta .icon{margin-right:4px}
@@ -349,9 +93,11 @@
     .btn-ic svg{width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none}
     .btn-stack{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:auto;min-width:0}
     .btn-stack .ver{white-space:nowrap;font-size:10px}
+    @media (max-width:480px){ .btn-stack .ver{font-size:9px} }
     @media (max-width:600px){
-      main{grid-template-columns:1fr;gap:1rem}
-      .app-card{padding:20px}
+      main{padding-left:14px;padding-right:14px}
+      #appContainer{grid-template-columns:1fr;gap:20px}
+      .app-card{padding:24px}
     }
   </style>
 
@@ -539,149 +285,67 @@
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <header>
-      <h1>📱 Cổng Cài Đặt Ứng Dụng</h1>
-      <p>Lựa chọn phiên bản Test (Dev) hoặc Hoàn thiện (Live) tương ứng với nền tảng thiết bị di động của bạn.</p>
-    </header>
-
-    <!-- Sếp 2026-06-26: search + category filter như các hub khác -->
-    <section class="search-section">
-      <div class="search-wrapper">
-        <i data-lucide="search" class="search-ic"></i>
-        <input type="text" id="searchInput" placeholder="Tìm ứng dụng theo tên, mô tả, danh mục..." oninput="filterApps()" autocomplete="off">
-      </div>
-      <div id="categoryChips" class="category-chips"></div>
-    </section>
-
-    <main id="appContainer">
-      <!-- Dữ liệu JS sẽ đổ bộ vào đây -->
-    </main>
-  </div>
-
+  <div class="bg-animation"><div class="blob"></div><div class="blob blob-2"></div></div>
+  <header><h1>Ntech X Tranquil Mind Studio</h1></header>
+  <section class="search-section"><div class="search-wrapper"><input type="text" id="searchInput" placeholder="Search for apps..." oninput="filterApps()"></div></section>
+  <div class="cat-chips" id="catChips"></div>
+  <main><div id="appContainer"></div></main>
+  <footer><p>&copy; 2026 Ntech X Tranquil Mind Studio. Powered by Platinum Engine.</p></footer>
   <script>
-    // Logic Javascript không đổi
     let allApps = [];
-    Promise.all([
-      fetch("apps.json?t=" + Date.now()).then(r => r.json()).catch(()=>({apps:[]})),
-      fetch("versions.json").then(r => r.ok ? r.json() : {apps:{}}).catch(()=>({apps:{}}))
-    ]).then(([data, v]) => {
-        window.__sv = (v && v.apps) || {};
-        const container = document.getElementById("appContainer");
-
-        if (!data.apps || data.apps.length === 0) {
-          container.innerHTML = '<div class="system-msg">Chưa có ứng dụng nào được xuất bản. Vui lòng quay lại sau!</div>';
-          return;
-        }
-        allApps = data.apps.map(a => ({...a, storeUpdated: (window.__sv||{})[a.id]?.updated_on || null}));
-        data.apps.sort((a,b) => (b.store ? 1 : 0) - (a.store ? 1 : 0));
-
-        data.apps.forEach((app, index) => {
-          const isIOS = (app.platform || "").toLowerCase().includes("ios");
+    let selectedCategory = "";
+    const buildCategoryChips = () => {
+      const host = document.getElementById("catChips");
+      if (!host) return;
+      const cats = [...new Set(allApps.map(a => a.category).filter(Boolean))].sort();
+      if (!cats.length) { host.innerHTML = ""; return; }
+      const chip = (label, val, cnt) => `<button type="button" class="cat-chip${selectedCategory===val?' active':''}" onclick="selectCategory(this.dataset.cat)" data-cat="${val.replace(/"/g,'&quot;')}">${label}${cnt!=null?` <span class="cnt">${cnt}</span>`:''}</button>`;
+      host.innerHTML = chip("Tất cả", "", allApps.length) + cats.map(c => chip(c, c, allApps.filter(a=>a.category===c).length)).join("");
+    };
+    const selectCategory = (val) => { selectedCategory = val; buildCategoryChips(); filterApps(); };
+    const formatUrl = (url, isIOS) => url && isIOS ? "itms-services://?action=download-manifest&url=" + encodeURIComponent(url) : url;
+    const renderApps = (apps) => {
+      const container = document.getElementById("appContainer"); container.innerHTML = "";
+      if (apps.length === 0) { container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 100px; color: var(--text-muted); font-weight: 700;">🔍 No apps found matching your search.</div>'; return; }
+      apps.forEach((app, index) => {
+        const isIOS = (app.platform || "").toLowerCase().includes("ios");
         const isAndroid = !app.platform || app.platform.toLowerCase().includes("android");
         const buildLabel = (isIOS && !isAndroid) ? "Build TestFlight" : "Build AAB";
-          const iconSrc = app.icon || "";
-          
-          const devUrl = app.downloads?.dev || "";
-          const prodUrl = app.downloads?.prod || "";
-          const noadsUrl = app.downloads?.noads || "";
-          const nameEsc = (app.name || '').replace(/'/g, "\\'");
-          // NO_ADS_BUILD: nút phục vụ designer — chỉ app Android (Flutter), hiện sau đăng nhập.
-          const noAdsTrigger = isAndroid ? `<button type="button" class="btn btn-noadsb" onclick="openNoAdsModal('${app.id}', '${nameEsc}')"><i class="btn-ic" data-lucide="shield-off"></i><span class="btn-stack">Build No-Ads</span></button>` : "";
-          const noAdsDl = (isAndroid && noadsUrl) ? `<a href="${noadsUrl}" class="btn btn-noads"><i class="btn-ic" data-lucide="download"></i><span class="btn-stack">Tải No-Ads</span></a>` : "";
-
+        const devUrl = formatUrl(app.downloads?.dev, isIOS);
+        const prodUrl = formatUrl(app.downloads?.prod, isIOS);
+        const aabUrl = app.downloads?.aab || "";
+        const noadsUrl = app.downloads?.noads || "";
+        const storeUrl = app.store || "";
+        const nameEsc = (app.name || '').replace(/'/g, "\\'");
+        // NO_ADS_BUILD: nút phục vụ designer — chỉ app Android (Flutter), hiện sau đăng nhập.
+        const noAdsTrigger = isAndroid ? `<button type="button" class="btn btn-noadsb" onclick="openNoAdsModal('${app.id}', '${nameEsc}')"><i class="btn-ic" data-lucide="shield-off"></i><span class="btn-stack">Build No-Ads</span></button>` : "";
+        const noAdsDl = (isAndroid && noadsUrl) ? `<a href="${noadsUrl}" class="btn btn-noads"><i class="btn-ic" data-lucide="download"></i><span class="btn-stack">Tải No-Ads</span></a>` : "";
         const v = app.versions || {};
         const stack = (label, k) => v[k]
           ? `<span class="btn-stack">${label}<span class="ver">v${v[k]}</span></span>`
           : `<span class="btn-stack">${label}</span>`;
-          /* Logic Định Tuyến cho IOS bắt buộc Mã Hoá URL an toàn */
-          const formatUrl = (url, isIOS) => {
-            if (!url) return "";
-            if (isIOS) return "itms-services://?action=download-manifest&url=" + encodeURIComponent(url);
-            return url;
-          };
-
-          const features = (app.features || [])
-            .map(f => `<span class="feature-tag">${f}</span>`)
-            .join("");
-
-          const html = `
-            <article class="app-card" data-app-id="${app.id}">
-              <div class="card-header">
-                <div class="app-icon">
-                  ${iconSrc ? `<img src="${iconSrc}" alt="Icon ${app.name}" width="80" height="80" onerror="this.style.display='none'">` : '<div style="width:100%;height:100%;background:linear-gradient(135deg,#ede9fe,#e0e7ff);"></div>'}
-                </div>
-                <div class="app-title-group">
-                  <h2 class="app-title">${app.name || "App Name"}</h2>
-                  <div class="app-badge-row"><span class="platform-badge ${isIOS ? 'ios' : 'android'}">OS: ${app.platform || "Android"}</span>${app.category ? `<span class="pill-category cat-src-${app.category_source||'store'}" title="Nguồn category: ${app.category_source==='override'?'Override tay':app.category_source==='ai'?'AI phân loại':app.category_source==='gitlab'?'Fallback subgroup':'Store category'}"><i data-lucide="tag"></i>${app.category}</span>` : ''}<span class="prod-ads-badge" data-prod-ads="loading" style="display:none"></span><span class="health-badge" data-health="loading" style="display:none"></span></div>
-                </div>
-              </div>
-              
-              <p class="app-desc">${app.description || ""}</p>
-              
-              ${features ? `<div class="feature-group">${features}</div>` : ""}
-              
-              <div class="card-actions">
-                ${devUrl ? `<a class="btn btn-dev" href="${formatUrl(devUrl, isIOS)}" aria-label="Cài đặt bản Dev của ${app.name}"><i class="btn-ic" data-lucide="wrench"></i>${stack('Cài bản Dev','dev')}</a>` : ""}
-                ${prodUrl ? `<a class="btn btn-prod" href="${formatUrl(prodUrl, isIOS)}" aria-label="Cài đặt bản Live của ${app.name}"><i class="btn-ic" data-lucide="rocket"></i>${stack('Cài bản Live','prod')}</a>` : ""}
-                ${app.downloads?.aab ? `<a class="btn btn-aab" href="${app.downloads.aab}"><i class="btn-ic" data-lucide="package"></i>${stack('Tải file AAB','aab')}</a>` : ""}
-                ${app.store ? `<a class="btn btn-store" href="${app.store}" target="_blank" rel="noopener"><i class="btn-ic" data-lucide="shopping-bag"></i><span class="btn-stack">View on Store</span></a>` : ""}
-          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')"><i class="btn-ic" data-lucide="hammer"></i><span class="btn-stack">${buildLabel}</span></button>${noAdsTrigger}${noAdsDl}<button type="button" class="btn btn-gd" onclick="openViewDesc('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="file-text"></i><span class="btn-stack">Description</span></button><button type="button" class="btn btn-as" onclick="dlAssets('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="download"></i><span class="btn-stack">Assets</span></button><button type="button" class="btn btn-ba" onclick="genBaDocs('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="clipboard-list"></i><span class="btn-stack">BA + Tests</span></button><button type="button" class="btn btn-ss" onclick="openShots('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="image"></i><span class="btn-stack">Screenshots</span></button><button type="button" class="btn btn-fl" onclick="openFlow('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="git-branch"></i><span class="btn-stack">View Flow</span></button>
-              </div>${app.storeUpdated ? `<div class="store-meta"><span class="icon">📅</span>Updated on ${app.storeUpdated}</div>` : ""}
-            </article>
-          `;
-          container.insertAdjacentHTML("beforeend", html);
-        });
-        window.lucide && lucide.createIcons();
-        buildCategoryChips();
-        runHealthCheck(); enrichCardDescriptions(); autoOpenFromUrl();
-      })
-      .catch(err => {
-        document.getElementById("appContainer").innerHTML = '<div class="system-msg" style="color:var(--accent-orange)"><b>❌ Lỗi Hệ Thống:</b> Không thể tải danh sách ứng dụng. Vui lòng F5 (tải lại trang).</div>';
-        console.error("Lỗi Fetch JSON:", err);
+        const card = document.createElement("article"); card.className = "app-card"; card.style.animationDelay = `${index * 0.1}s`; card.dataset.appId = app.id;
+        card.innerHTML = `<div class="app-icon-box"><img src="${app.icon || 'https://via.placeholder.com/150'}" class="app-icon" alt="${app.name}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(app.name)}&background=7c3aed&color=fff'"></div>
+          <div class="badge-row"><span class="badge ${isIOS ? 'ios' : 'android'}"><i data-lucide="${isIOS ? 'apple' : 'smartphone'}" style="width:14px;height:14px;vertical-align:-2px;margin-right:5px"></i>${app.platform || 'Android'}</span>${app.category ? `<span class="pill-category cat-src-${app.category_source||'store'}" title="Nguồn category: ${app.category_source==='override'?'Override tay':app.category_source==='ai'?'AI phân loại':app.category_source==='gitlab'?'Fallback subgroup':'Store category'}"><i data-lucide="tag"></i>${app.category}</span>` : ''}<span class="prod-ads-badge" data-prod-ads="loading" style="display:none"></span><span class="health-badge" data-health="loading" style="display:none"></span></div>
+          <h2 class="app-title">${app.name}</h2><p class="app-desc">${app.description || ''}</p>
+          <div class="btn-grid">${devUrl ? `<a href="${devUrl}" class="btn btn-dev"><i class="btn-ic" data-lucide="wrench"></i>${stack('Dev Build','dev')}</a>` : ""} ${prodUrl ? `<a href="${prodUrl}" class="btn btn-live"><i class="btn-ic" data-lucide="rocket"></i>${stack('Live Build','prod')}</a>` : ""} ${aabUrl ? `<a href="${aabUrl}" class="btn btn-full"><i class="btn-ic" data-lucide="package"></i>${stack('Download AAB','aab')}</a>` : ""} ${storeUrl ? `<a href="${storeUrl}" target="_blank" rel="noopener" class="btn btn-store"><i class="btn-ic" data-lucide="shopping-bag"></i><span class="btn-stack">View on Store</span></a>` : ""}
+          <button type="button" class="btn btn-build" onclick="openBuildModal('${app.id}', '${(app.name || '').replace(/'/g, "\\'")}')"><i class="btn-ic" data-lucide="hammer"></i><span class="btn-stack">${buildLabel}</span></button>${noAdsTrigger}${noAdsDl}<button type="button" class="btn btn-gd" onclick="openViewDesc('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="file-text"></i><span class="btn-stack">Description</span></button><button type="button" class="btn btn-as" onclick="dlAssets('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="download"></i><span class="btn-stack">Assets</span></button><button type="button" class="btn btn-ba" onclick="genBaDocs('${app.id}', '${(app.name || '').replace(/'/g, "\'")}', this)"><i class="btn-ic" data-lucide="clipboard-list"></i><span class="btn-stack">BA + Tests</span></button><button type="button" class="btn btn-ss" onclick="openShots('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="image"></i><span class="btn-stack">Screenshots</span></button><button type="button" class="btn btn-fl" onclick="openFlow('${app.id}', '${(app.name || '').replace(/'/g, "\'")}')"><i class="btn-ic" data-lucide="git-branch"></i><span class="btn-stack">View Flow</span></button></div>${app.storeUpdated ? `<div class="store-meta"><span class="icon">📅</span>Updated on ${app.storeUpdated}</div>` : ""}`;
+        container.appendChild(card);
       });
+    };
+    const filterApps = () => {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      renderApps(allApps.filter(app => (selectedCategory === "" || app.category === selectedCategory) && (app.name.toLowerCase().includes(query) || (app.description && app.description.toLowerCase().includes(query)) || (app.category && app.category.toLowerCase().includes(query)))));
+    };
+    Promise.all([
+      fetch("apps.json?t=" + Date.now()).then(r => r.json()).catch(()=>({apps:[]})),
+      fetch("versions.json").then(r => r.ok ? r.json() : {apps:{}}).catch(()=>({apps:{}}))
+    ]).then(([data, v]) => {
+      window.__sv = (v && v.apps) || {};
+      allApps = (data.apps || []).map(a => ({...a, storeUpdated: (window.__sv||{})[a.id]?.updated_on || null})); allApps.sort((a,b) => (b.store ? 1 : 0) - (a.store ? 1 : 0)); buildCategoryChips(); renderApps(allApps); window.lucide && lucide.createIcons(); runHealthCheck(); enrichCardDescriptions(); window.lucide && lucide.createIcons(); autoOpenFromUrl();
+    }).catch(err => { document.getElementById("appContainer").innerHTML = '<div style="color: #ef4444; font-weight: 800; text-align: center; grid-column: 1/-1;">❌ Connection error. Please try again later.</div>'; });
 
-    function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];}); }
-
-    /* Sếp 2026-06-26: search + category filter (như các hub khác) — ẩn/hiện card,
-       KHÔNG re-render (ntech render inline, giữ nguyên health/sort/enrich logic). */
-    let selectedCategory = "";
-    function buildCategoryChips(){
-      const host = document.getElementById("categoryChips");
-      if(!host) return;
-      const cats = [...new Set((allApps||[]).map(a => a.category).filter(Boolean))].sort();
-      if(!cats.length){ host.innerHTML = ""; return; }
-      const chip = (label, val, cnt) => `<button type="button" class="cat-chip${selectedCategory===val?' active':''}" onclick="selectCategory(this.dataset.cat)" data-cat="${String(val).replace(/"/g,'&quot;')}">${label}${cnt!=null?` <span class="cnt">${cnt}</span>`:''}</button>`;
-      host.innerHTML = chip("Tất cả", "", (allApps||[]).filter(a=>a.category).length)
-        + cats.map(c => chip(c, c, allApps.filter(a=>a.category===c).length)).join("");
-    }
-    function selectCategory(val){ selectedCategory = val; buildCategoryChips(); filterApps(); }
-    function filterApps(){
-      const q = (document.getElementById("searchInput")?.value || "").toLowerCase().trim();
-      let shown = 0;
-      document.querySelectorAll("#appContainer .app-card").forEach(card => {
-        const app = (allApps||[]).find(a => a.id === card.dataset.appId);
-        if(!app){ card.classList.remove("hidden"); return; }
-        const okCat = selectedCategory === "" || app.category === selectedCategory;
-        const hay = ((app.name||"") + " " + (app.description||"") + " " + (app.category||"")).toLowerCase();
-        const okQ = !q || hay.includes(q);
-        const show = okCat && okQ;
-        card.classList.toggle("hidden", !show);
-        if(show) shown++;
-      });
-      let empty = document.getElementById("noResultMsg");
-      if(shown === 0){
-        if(!empty){
-          empty = document.createElement("div");
-          empty.id = "noResultMsg"; empty.className = "system-msg";
-          empty.textContent = "Không tìm thấy ứng dụng phù hợp.";
-          document.getElementById("appContainer").appendChild(empty);
-        }
-        empty.style.display = "";
-      } else if(empty){ empty.style.display = "none"; }
-    }
-
+    // Deep-link: ?app=<slug>&open=desc|ba|ss — auto mở popup khi notify Discord
     function autoOpenFromUrl(){
       try{
         var q = new URLSearchParams(location.search);
@@ -697,8 +361,11 @@
             genBaDocs(slug, nm, document.querySelector("[data-app-id='"+slug+"'] .btn-ba"));
           else if(action === "ss" && window.openShots) openShots(slug, nm);
         }, 100);
-      }catch(e){}
+      }catch(e){ /* silent */ }
     }
+
+
+    function escHtml(s){ return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];}); }
     function urlRow(label, url, ok){
       if(!url) return '<div style="font-size:.7rem;color:#94a3b8">'+label+': <i>(trống)</i></div>';
       const okBadge = ok===true ? '<span style="color:#16a34a;font-weight:700">✓</span>'
@@ -836,10 +503,10 @@
       }catch(e){}
     }
     async function runHealthCheck(){
-      if(!allApps.length) return;
-      const apps = allApps.filter(a => a.id).slice(0, 50).map(a => ({id: a.id, store_url: a.store || null}));
       runProdAdsCheck();
       if(localStorage.getItem("aab_authed")!=="1"){ clearHealthUI(); return; }
+      if(!allApps.length) return;
+      const apps = allApps.filter(a => a.id).slice(0, 50).map(a => ({id: a.id, store_url: a.store || null}));
       try{
         const r = await fetch("https://aab.tranquilmind.co/api/healthbulk", {
           method: "POST",
@@ -1006,6 +673,7 @@
     }
     window.enrichCardDescriptions = enrichCardDescriptions;
 
+  
   </script>
 
   <div class="aab-ov" id="buildModal">
@@ -1086,7 +754,7 @@
         const r = await fetch(BUILD_API + "/api/build", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
         const d = await r.json();
         if (!r.ok) throw new Error(d.error || "Build thất bại");
-        $("bmStatus").style.color = "#059669";
+        $("bmStatus").style.color = "#7c3aed";
         closeBuildModal(); showSnack("✅ " + (d.message || "Đã kích build"), d.pipeline_url, false);
       } catch (e) {
         $("bmStatus").style.color = "#ef4444";
@@ -1110,27 +778,42 @@
     function closeNoAdsModal() { $("noAdsModal").classList.remove("open"); }
     async function submitNoAds() {
       const pin = $("naPin").value.trim();
-      if (!pin) { $("naStatus").style.color = "#ef4444"; $("naStatus").textContent = "⚠️ Nhập mã PIN."; return; }
+      if (!pin) {
+        $("naStatus").style.color = "#ef4444";
+        $("naStatus").textContent = "⚠️ Nhập mã PIN.";
+        return;
+      }
       $("naOk").disabled = true;
-      $("naStatus").style.color = "#64748b";
+      $("naStatus").style.color = "var(--text-muted)";
       $("naStatus").textContent = "⏳ Đang kích build No-Ads...";
       try {
-        const r = await fetch(BUILD_API + "/api/build", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ app_id: naAppId, pin: pin, no_ads: true }) });
+        const r = await fetch(`${BUILD_API}/api/build`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ app_id: naAppId, pin: pin, no_ads: true }),
+        });
         const d = await r.json();
         if (!r.ok) throw new Error(d.error || "Build thất bại");
         closeNoAdsModal();
         if (window.showSnack) showSnack("✅ Đã kích build No-Ads. Xong sau ~10-15 phút → báo Discord; tải qua nút \"Tải No-Ads\" trên thẻ app (nhớ F5 lại trang).", d.pipeline_url, false);
-      } catch (e) { $("naStatus").style.color = "#ef4444"; $("naStatus").textContent = "❌ " + e.message; }
-      finally { $("naOk").disabled = false; }
+      } catch (e) {
+        $("naStatus").style.color = "#ef4444";
+        $("naStatus").textContent = "❌ " + e.message;
+      } finally {
+        $("naOk").disabled = false;
+      }
     }
-    $("noAdsModal").addEventListener("click", (e) => { if (e.target.id === "noAdsModal") closeNoAdsModal(); });
+    $("noAdsModal").addEventListener("click", (e) => {
+      if (e.target.id === "noAdsModal") closeNoAdsModal();
+    });
+
     document.getElementById("buildModal").addEventListener("click", (e) => { if (e.target.id === "buildModal") closeBuildModal(); });
   </script>
 
   <style>/* AAB_LOGIN */
     .btn-build{display:none!important}
     body.aab-authed .btn-build{display:flex!important}
-    #aablBtn{position:fixed;right:16px;bottom:16px;z-index:100000;background:#312e81;color:#fff;border:none;border-radius:999px;padding:12px 18px;font:600 14px/1 system-ui,-apple-system,sans-serif;box-shadow:0 8px 24px rgba(99,102,241,.35);cursor:pointer}
+    #aablBtn{position:fixed;right:16px;bottom:16px;z-index:100000;background:#0f172a;color:#fff;border:none;border-radius:999px;padding:12px 18px;font:600 14px/1 system-ui,-apple-system,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer}
     #aablOv{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:100001;padding:20px}
     #aablOv.open{display:flex}
     #aablMd{background:#fff;border-radius:20px;padding:26px 22px;width:100%;max-width:340px;box-shadow:0 30px 80px rgba(0,0,0,.3);font-family:system-ui,-apple-system,sans-serif}
@@ -1141,7 +824,7 @@
     #aablAct{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
     #aablAct button{padding:12px;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-family:inherit}
     .aabl-cancel{background:#f1f5f9;color:#475569}
-    .aabl-ok{background:#059669;color:#fff}
+    .aabl-ok{background:#7c3aed;color:#fff}
   </style>
   <button id="aablBtn" type="button"><i data-lucide="lock-keyhole" style="width:14px;height:14px;vertical-align:-2px;margin-right:5px"></i>Đăng nhập</button>
   <div id="aablOv"><div id="aablMd">
@@ -1491,7 +1174,7 @@
           reached=true;
           var d=await r.json();
           if(!r.ok||!d.ok) throw new Error((d&&d.error)||"Thất bại");
-          msg.style.color="#059669"; msg.textContent="✅ Gen OK ("+(d.duration_sec||0)+"s)";
+          msg.style.color="#7c3aed"; msg.textContent="✅ Gen OK ("+(d.duration_sec||0)+"s)";
           openViewDesc(appId, appEl.textContent); gb.disabled=false; return;
         }catch(e){
           if(reached){ msg.style.color="#ef4444"; msg.textContent="❌ "+e.message; gb.disabled=false; return; }
@@ -1620,13 +1303,20 @@
     .st-cancel{background:#f1f5f9;color:#475569}
     .st-ok{background:#2563eb;color:#fff}
     .st-ok:disabled{opacity:.55;cursor:not-allowed}
-    /* ===== CATEGORY pill (ntech: app-badge-row đã wrap sẵn) ===== */
-    .pill-category { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: #fff; }
+      /* ===== CATEGORY: pill + chips filter + badge-row wrap (ads không bị che) ===== */
+    .cat-chips { max-width: 1200px; margin: 0 auto 10px; padding: 0 40px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .cat-chip { cursor: pointer; font-family: inherit; font-size: 0.85rem; font-weight: 700; padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--glass-border); background: var(--card-bg); color: var(--text-muted); transition: all .25s; display: inline-flex; align-items: center; gap: 6px; }
+    .cat-chip:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); }
+    .cat-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .cat-chip .cnt { font-size: 0.72rem; font-weight: 800; opacity: .7; background: rgba(128,128,128,0.22); padding: 1px 7px; border-radius: 999px; }
+    .cat-chip.active .cnt { background: rgba(255,255,255,0.25); opacity: 1; }
+    .pill-category { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 800; padding: 5px 11px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: #fff; }
     .pill-category.cat-src-override { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
     .pill-category.cat-src-ai { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
     .pill-category.cat-src-gitlab { background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%); }
     .pill-category i, .pill-category svg { width: 11px; height: 11px; stroke-width: 2.4; }
-  </style>
+    .badge-row { flex-wrap: wrap !important; overflow: visible !important; row-gap: 8px !important; }
+</style>
   <div id="stOv"><div id="stMd">
     <h3><i data-lucide="plus" style="width:20px;height:20px;vertical-align:-4px;margin-right:8px"></i>Add Store Link</h3>
     <p class="sub" id="stApp"></p>
@@ -1898,7 +1588,7 @@
         });
         var d = await r.json();
         if(!r.ok || !d.ok) throw new Error(d.error||("HTTP "+r.status));
-        msg.style.color="#059669";
+        msg.style.color="#7c3aed";
         msg.textContent = "✅ Gen OK ("+d.duration_sec+"s)";
         viewLink.href = d.result_url;
         viewLink.style.display = "block";
@@ -2006,7 +1696,7 @@
         var r=await fetch(t+"/genshots",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({slug:slug,pin:v})});
         var d=await r.json();
         if(!r.ok||!d.ok) throw new Error(d.error||"Thất bại");
-        msg.style.color="#059669"; msg.textContent="✅ Chụp xong "+(d.count||0)+" màn ("+(d.duration_sec||0)+"s)";
+        msg.style.color="#7c3aed"; msg.textContent="✅ Chụp xong "+(d.count||0)+" màn ("+(d.duration_sec||0)+"s)";
         loadGallery(slug);
       }catch(e){ msg.style.color="#ef4444"; msg.textContent="❌ "+e.message; }
       finally{ gb.disabled=false; }
@@ -2039,7 +1729,7 @@
           await new Promise(function(res){ setTimeout(res, 250); });
         }catch(e){ /* ignore single fail */ }
       }
-      msg.style.color="#059669"; msg.textContent="✅ Đã tải "+done+"/"+total+" ảnh.";
+      msg.style.color="#7c3aed"; msg.textContent="✅ Đã tải "+done+"/"+total+" ảnh.";
       dlBtn.disabled = false;
     };
   })();</script>
