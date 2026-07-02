@@ -19,7 +19,9 @@
       },
       "store": "",
       "category": "Streaming",
-      "category_source": "rule"
+      "category_source": "rule",
+      "store_updated": null,
+      "store_version": null
     },
     {
       "id": "idol_mirage",
@@ -40,7 +42,9 @@
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
       "category": "Entertainment",
-      "category_source": "store"
+      "category_source": "store",
+      "store_updated": "Jun 29, 2026",
+      "store_version": null
     },
     {
       "id": "kairo_chat",
@@ -59,7 +63,9 @@
       },
       "store": "",
       "category": "AI Chat",
-      "category_source": "rule"
+      "category_source": "rule",
+      "store_updated": null,
+      "store_version": null
     },
     {
       "id": "rollicon_3d",
@@ -80,7 +86,9 @@
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
       "category": "Personalization",
-      "category_source": "store"
+      "category_source": "store",
+      "store_updated": "Jun 23, 2026",
+      "store_version": null
     },
     {
       "id": "sonic_cleaner",
@@ -101,7 +109,9 @@
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner",
       "category": "Cleaner & Booster",
-      "category_source": "rule"
+      "category_source": "rule",
+      "store_updated": "Jun 8, 2026",
+      "store_version": null
     },
     {
       "id": "sticker_lab",
@@ -122,7 +132,9 @@
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
       "category": "Tools",
-      "category_source": "store"
+      "category_source": "store",
+      "store_updated": "Jun 11, 2026",
+      "store_version": null
     },
     {
       "id": "veilo_browser",
@@ -143,7 +155,9 @@
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
       "category": "Browser",
-      "category_source": "rule"
+      "category_source": "rule",
+      "store_updated": "Jun 15, 2026",
+      "store_version": null
     }
   ]
 }
