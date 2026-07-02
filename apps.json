@@ -18,8 +18,8 @@
         "aab": "1.0.0+26062001"
       },
       "store": "",
-      "category": "Streaming",
-      "category_source": "rule",
+      "category": null,
+      "category_source": null,
       "store_updated": null,
       "store_version": null
     },
@@ -41,9 +41,9 @@
         "aab": "1.0.1+26070101"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
-      "category": "Entertainment",
-      "category_source": "store",
-      "store_updated": "Jun 29, 2026",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
       "store_version": null
     },
     {
@@ -62,8 +62,8 @@
         "prod": "1.0.0+1"
       },
       "store": "",
-      "category": "AI Chat",
-      "category_source": "rule",
+      "category": null,
+      "category_source": null,
       "store_updated": null,
       "store_version": null
     },
@@ -85,9 +85,9 @@
         "aab": "1.0.3+26062301"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
-      "category": "Personalization",
-      "category_source": "store",
-      "store_updated": "Jun 23, 2026",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
       "store_version": null
     },
     {
@@ -108,9 +108,9 @@
         "aab": "1.0.3+26061002"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner",
-      "category": "Cleaner & Booster",
-      "category_source": "rule",
-      "store_updated": "Jun 8, 2026",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
       "store_version": null
     },
     {
@@ -131,15 +131,15 @@
         "aab": "1.0.2+26061102"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
-      "category": "Tools",
-      "category_source": "store",
-      "store_updated": "Jun 11, 2026",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
       "store_version": null
     },
     {
       "id": "veilo_browser",
       "name": "Veilo Browser",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -154,9 +154,9 @@
         "aab": "1.0.3+26062901"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
-      "category": "Browser",
-      "category_source": "rule",
-      "store_updated": "Jun 15, 2026",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
       "store_version": null
     }
   ]
