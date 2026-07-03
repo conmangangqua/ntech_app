@@ -24,6 +24,25 @@
       "store_version": null
     },
     {
+      "id": "cutout_ai",
+      "name": "Cutout Ai",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/cutout_ai_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/cutout_ai_dev.apk"
+      },
+      "versions": {
+        "dev": "1.0.0+1"
+      },
+      "store": "",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
+      "store_version": null
+    },
+    {
       "id": "idol_mirage",
       "name": "Idol Mirage",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png",
