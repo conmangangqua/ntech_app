@@ -26,7 +26,7 @@
     {
       "id": "cutout_ai",
       "name": "Cutout Ai",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/cutout_ai_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/cutout_ai_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
