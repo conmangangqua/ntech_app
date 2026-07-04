@@ -70,7 +70,7 @@
     {
       "id": "iptv_velix",
       "name": "Iptv Velix",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/iptv_velix_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -80,7 +80,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/iptv_velix.aab"
       },
       "versions": {
-        "dev": "1.0.0+26070401",
+        "dev": "1.0.0+26070501",
         "prod": "1.0.0+26070401",
         "aab": "1.0.0+26070501"
       },
