@@ -70,17 +70,19 @@
     {
       "id": "iptv_velix",
       "name": "Iptv Velix",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/iptv_velix_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/iptv_velix_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_prod.apk"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/iptv_velix.aab"
       },
       "versions": {
         "dev": "1.0.0+26070401",
-        "prod": "0.1.0+1"
+        "prod": "1.0.0+26070401",
+        "aab": "1.0.0+26070401"
       },
       "store": "",
       "category": null,
