@@ -101,11 +101,13 @@
       "features": [],
       "downloads": {
         "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/kairo_chat_dev.apk",
-        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_prod.apk"
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_prod.apk",
+        "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/kairo_chat.aab"
       },
       "versions": {
         "dev": "1.0.0+1",
-        "prod": "1.0.0+1"
+        "prod": "1.0.0+1",
+        "aab": "1.0.0+26070501"
       },
       "store": "",
       "category": null,
