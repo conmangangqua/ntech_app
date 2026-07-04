@@ -79,7 +79,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_prod.apk"
       },
       "versions": {
-        "dev": "0.1.0+1",
+        "dev": "1.0.0+26070401",
         "prod": "0.1.0+1"
       },
       "store": "",
