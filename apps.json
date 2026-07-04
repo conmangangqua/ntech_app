@@ -95,7 +95,7 @@
     {
       "id": "kairo_chat",
       "name": "Kairo Chat",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/kairo_chat_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -105,7 +105,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/kairo_chat.aab"
       },
       "versions": {
-        "dev": "1.0.0+1",
+        "dev": "1.0.0+26070501",
         "prod": "1.0.0+1",
         "aab": "1.0.0+26070501"
       },
