@@ -48,7 +48,7 @@
     },
     {
       "id": "idol_mirage",
-      "name": "Idol Mirage",
+      "name": "Idol Mirage: Celeb Prank Call",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png",
       "platform": "Android",
       "description": "",
@@ -117,7 +117,7 @@
     },
     {
       "id": "rollicon_3d",
-      "name": "Rollicon 3d",
+      "name": "Rollicon 3D: Live Icons",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
       "platform": "Android",
       "description": "",
@@ -140,7 +140,7 @@
     },
     {
       "id": "sonic_cleaner",
-      "name": "Sonic Cleaner",
+      "name": "Sonic - Speaker Cleaner",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
       "platform": "Android",
       "description": "",
@@ -163,7 +163,7 @@
     },
     {
       "id": "sticker_lab",
-      "name": "Sticker Lab",
+      "name": "Sticker Lab: Sticker Maker",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png",
       "platform": "Android",
       "description": "",
@@ -186,7 +186,7 @@
     },
     {
       "id": "veilo_browser",
-      "name": "Veilo Browser",
+      "name": "Veilo: Private Browser & VPN",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
