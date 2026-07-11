@@ -63,10 +63,10 @@
         "prod": "1.0.1+26070101",
         "aab": "1.0.1+26070101"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
+      "store": "",
       "category": "Entertainment",
       "category_source": "store",
-      "store_updated": "Jul 2, 2026",
+      "store_updated": null,
       "store_version": null
     },
     {
