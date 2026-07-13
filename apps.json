@@ -109,7 +109,7 @@
         "prod": "1.0.0+26070501",
         "aab": "1.0.0+26070501"
       },
-      "store": "",
+      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.kairo.chat",
       "category": "AI Chat",
       "category_source": "rule",
       "store_updated": null,
