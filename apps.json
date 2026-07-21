@@ -49,7 +49,7 @@
     {
       "id": "idol_mirage",
       "name": "Idol Mirage: Celeb Prank Call",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/idol_mirage_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -109,10 +109,10 @@
         "prod": "1.0.1+26071701",
         "aab": "1.0.0+26070501"
       },
-      "store": "",
+      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.kairo.chat",
       "category": "AI Chat",
       "category_source": "rule",
-      "store_updated": null,
+      "store_updated": "Jul 5, 2026",
       "store_version": null
     },
     {
