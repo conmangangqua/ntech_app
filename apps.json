@@ -185,6 +185,25 @@
       "store_version": null
     },
     {
+      "id": "streamly_play",
+      "name": "Streamly Play",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/streamly_play_icon.png",
+      "platform": "Android",
+      "description": "",
+      "features": [],
+      "downloads": {
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/streamly_play_dev.apk"
+      },
+      "versions": {
+        "dev": "1.0.0+26070502"
+      },
+      "store": "",
+      "category": null,
+      "category_source": null,
+      "store_updated": null,
+      "store_version": null
+    },
+    {
       "id": "veilo_browser",
       "name": "Veilo: Private Browser & VPN",
       "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
