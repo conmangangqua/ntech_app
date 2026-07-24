@@ -187,15 +187,17 @@
     {
       "id": "streamly_play",
       "name": "Streamly Play",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/streamly_play_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/streamly_play_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
       "downloads": {
-        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/streamly_play_dev.apk"
+        "dev": "https://github.com/conmangangqua/ntech_app/releases/download/dev/streamly_play_dev.apk",
+        "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/streamly_play_prod.apk"
       },
       "versions": {
-        "dev": "1.0.0+26070502"
+        "dev": "1.0.0+26070502",
+        "prod": "1.0.0+26070502"
       },
       "store": "",
       "category": null,
