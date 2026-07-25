@@ -187,7 +187,7 @@
     {
       "id": "streamly_play",
       "name": "Streamly Play",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/streamly_play_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/streamly_play_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
