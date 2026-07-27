@@ -3,7 +3,7 @@
     {
       "id": "aurora_drama",
       "name": "Aurora Drama",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png",
+      "icon": "icons/aurora_drama.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -26,7 +26,7 @@
     {
       "id": "cutout_ai",
       "name": "Cutout Ai",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/cutout_ai_icon.png",
+      "icon": "icons/cutout_ai.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -49,7 +49,7 @@
     {
       "id": "idol_mirage",
       "name": "Idol Mirage: Celeb Prank Call",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png",
+      "icon": "icons/idol_mirage.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -72,7 +72,7 @@
     {
       "id": "iptv_velix",
       "name": "Iptv Velix",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_icon.png",
+      "icon": "icons/iptv_velix.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -95,7 +95,7 @@
     {
       "id": "kairo_chat",
       "name": "Kairo Chat",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_icon.png",
+      "icon": "icons/kairo_chat.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -118,7 +118,7 @@
     {
       "id": "rollicon_3d",
       "name": "Rollicon 3D: Live Icons",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
+      "icon": "icons/rollicon_3d.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -141,7 +141,7 @@
     {
       "id": "sonic_cleaner",
       "name": "Sonic - Speaker Cleaner",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
+      "icon": "icons/sonic_cleaner.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -164,7 +164,7 @@
     {
       "id": "sticker_lab",
       "name": "Sticker Lab: Sticker Maker",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png",
+      "icon": "icons/sticker_lab.webp",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -187,7 +187,7 @@
     {
       "id": "veilo_browser",
       "name": "Veilo: Private Browser & VPN",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
+      "icon": "icons/veilo_browser.webp",
       "platform": "Android",
       "description": "",
       "features": [],

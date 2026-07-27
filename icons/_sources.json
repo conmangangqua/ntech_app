@@ -1,0 +1,38 @@
+{
+  "aurora_drama": {
+    "sha": "c360d9b648f9dd86fa6d2d10526bd7469ce9760eaa7e21e625def027cc4b0d5c",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png"
+  },
+  "cutout_ai": {
+    "sha": "1a09f9f0a7eea466cc081be9f6b7b5924ce123729c1214a86fde70edbf935ccf",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/cutout_ai_icon.png"
+  },
+  "idol_mirage": {
+    "sha": "d12aec27c403ba9dadc239800140cf4d6db9c315a86bffaefc9a5229c3d5185d",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png"
+  },
+  "iptv_velix": {
+    "sha": "24e9b69e12b0ee15c06770e5d1bb80f229e17ee4acc4aee45a017348df272ddf",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_icon.png"
+  },
+  "kairo_chat": {
+    "sha": "d4e154fddd9bf0662f3fa326ed58e234f71721fb60ed6b8b7154e536d8590243",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_icon.png"
+  },
+  "rollicon_3d": {
+    "sha": "a888457076b6237d115888aa7d528a528cc5e747b6b6220fe773dc009d595bbc",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png"
+  },
+  "sonic_cleaner": {
+    "sha": "1d69e8717de6f9be0bddf812eda3ca901af6e16929e70b3090c92f1610681b33",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png"
+  },
+  "sticker_lab": {
+    "sha": "dcae637bab208a7d43123eb9dec8a683b2b7cf5a5285345b742159037ff9a6f0",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png"
+  },
+  "veilo_browser": {
+    "sha": "7f26b3ee923dc57d1c5eb9deb36cee954bb765ca942239533a86551dfcb51d1c",
+    "src": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png"
+  }
+}
