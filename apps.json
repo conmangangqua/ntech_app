@@ -3,7 +3,7 @@
     {
       "id": "aurora_drama",
       "name": "Aurora Drama",
-      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/dev/aurora_drama_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -13,7 +13,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/aurora_drama.aab"
       },
       "versions": {
-        "dev": "1.0.0+26072202",
+        "dev": "1.0.0+26072702",
         "prod": "1.0.0+26072202",
         "aab": "1.0.0+26072702"
       },
