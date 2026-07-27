@@ -200,8 +200,8 @@
         "prod": "1.0.0+26070502"
       },
       "store": "",
-      "category": "iptv",
-      "category_source": "gitlab",
+      "category": "Entertainment",
+      "category_source": "store",
       "store_updated": null,
       "store_version": null
     },
