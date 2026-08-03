@@ -37,7 +37,7 @@
       },
       "versions": {
         "dev": "1.0.1+26080301",
-        "prod": "1.0.0+26070401",
+        "prod": "1.0.1+26080301",
         "aab": "1.0.0+26070401"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.cutoutai",
