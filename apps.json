@@ -36,7 +36,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/cutout_ai.aab"
       },
       "versions": {
-        "dev": "1.0.0+26070401",
+        "dev": "1.0.1+26080301",
         "prod": "1.0.0+26070401",
         "aab": "1.0.0+26070401"
       },
@@ -86,7 +86,7 @@
         "prod": "1.0.0+26070502",
         "aab": "1.0.0+26070502"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.iptv.velix",
+      "store": "",
       "category": "Video Players",
       "category_source": "store",
       "store_updated": null,
