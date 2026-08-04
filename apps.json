@@ -36,7 +36,7 @@
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/cutout_ai.aab"
       },
       "versions": {
-        "dev": "1.0.1+26080301",
+        "dev": "1.0.1+26080401",
         "prod": "1.0.1+26080301",
         "aab": "1.0.0+26070401"
       },
