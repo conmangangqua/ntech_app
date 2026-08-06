@@ -84,9 +84,9 @@
       "versions": {
         "dev": "1.0.1+26080401",
         "prod": "1.0.1+26080401",
-        "aab": "1.0.0+26070502"
+        "aab": "1.0.1+26080401"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.iptv.velix",
+      "store": "",
       "category": "Video Players",
       "category_source": "store",
       "store_updated": null,
