@@ -3,7 +3,7 @@
     {
       "id": "aurora_drama",
       "name": "Aurora Drama",
-      "icon": "icons/aurora_drama.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -12,11 +12,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/aurora_drama_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/aurora_drama.aab"
       },
-      "versions": {
-        "dev": "1.0.0+26072801",
-        "prod": "1.0.0+26072801",
-        "aab": "1.0.0+26080601"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.aurora.drama",
       "category": "Streaming",
       "category_source": "rule",
@@ -26,7 +22,7 @@
     {
       "id": "cutout_ai",
       "name": "Cutout Ai",
-      "icon": "icons/cutout_ai.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/cutout_ai_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -35,11 +31,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/cutout_ai_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/cutout_ai.aab"
       },
-      "versions": {
-        "dev": "1.0.1+26080401",
-        "prod": "1.0.1+26080401",
-        "aab": "1.0.0+26070401"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.cutoutai",
       "category": "Photography",
       "category_source": "store",
@@ -49,7 +41,7 @@
     {
       "id": "idol_mirage",
       "name": "Idol Mirage: Celeb Prank Call",
-      "icon": "icons/idol_mirage.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -58,11 +50,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/idol_mirage_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/idol_mirage.aab"
       },
-      "versions": {
-        "dev": "1.0.2+26072801",
-        "prod": "1.0.2+26072801",
-        "aab": "1.0.2+26072801"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
       "category": "Entertainment",
       "category_source": "store",
@@ -72,7 +60,7 @@
     {
       "id": "iptv_velix",
       "name": "Iptv Velix",
-      "icon": "icons/iptv_velix.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -81,12 +69,8 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/iptv_velix_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/iptv_velix.aab"
       },
-      "versions": {
-        "dev": "1.0.1+26080401",
-        "prod": "1.0.1+26080401",
-        "aab": "1.0.1+26080401"
-      },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.iptv.velix",
+      "versions": {},
+      "store": "",
       "category": "Video Players",
       "category_source": "store",
       "store_updated": null,
@@ -95,7 +79,7 @@
     {
       "id": "kairo_chat",
       "name": "Kairo Chat",
-      "icon": "icons/kairo_chat.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -104,11 +88,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/kairo_chat_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/kairo_chat.aab"
       },
-      "versions": {
-        "dev": "1.0.1+26072801",
-        "prod": "1.0.1+26072801",
-        "aab": "1.0.1+26072801"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.kairo.chat",
       "category": "AI Chat",
       "category_source": "rule",
@@ -118,7 +98,7 @@
     {
       "id": "rollicon_3d",
       "name": "Rollicon 3D: Live Icons",
-      "icon": "icons/rollicon_3d.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -127,11 +107,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/rollicon_3d_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/rollicon_3d.aab"
       },
-      "versions": {
-        "dev": "1.0.3+26062301",
-        "prod": "1.0.3+26062301",
-        "aab": "1.0.3+26062301"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
       "category": "Personalization",
       "category_source": "store",
@@ -141,7 +117,7 @@
     {
       "id": "sonic_cleaner",
       "name": "Sonic - Speaker Cleaner",
-      "icon": "icons/sonic_cleaner.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -150,11 +126,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sonic_cleaner_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sonic_cleaner.aab"
       },
-      "versions": {
-        "dev": "1.0.3+26072801",
-        "prod": "1.0.3+26072801",
-        "aab": "1.0.3+26072801"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner",
       "category": "Cleaner & Booster",
       "category_source": "rule",
@@ -164,7 +136,7 @@
     {
       "id": "sticker_lab",
       "name": "Sticker Lab: Sticker Maker",
-      "icon": "icons/sticker_lab.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -173,11 +145,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/sticker_lab_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/sticker_lab.aab"
       },
-      "versions": {
-        "dev": "1.0.2+26061102",
-        "prod": "1.0.2+26061102",
-        "aab": "1.0.3+26072801"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
       "category": "Personalization",
       "category_source": "store",
@@ -187,7 +155,7 @@
     {
       "id": "veilo_browser",
       "name": "Veilo: Private Browser & VPN",
-      "icon": "icons/veilo_browser.webp",
+      "icon": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_icon.png",
       "platform": "Android",
       "description": "",
       "features": [],
@@ -196,11 +164,7 @@
         "prod": "https://github.com/conmangangqua/ntech_app/releases/download/prod/veilo_browser_prod.apk",
         "aab": "https://github.com/conmangangqua/ntech_app/releases/download/aab/veilo_browser.aab"
       },
-      "versions": {
-        "dev": "1.0.3+26062901",
-        "prod": "1.0.3+26062901",
-        "aab": "1.0.3+26062901"
-      },
+      "versions": {},
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
       "category": "Browser",
       "category_source": "rule",
