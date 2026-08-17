@@ -86,7 +86,7 @@
         "prod": "1.0.1+26080401",
         "aab": "1.0.1+26080401"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.iptv.velix",
+      "store": "",
       "category": "Video Players",
       "category_source": "store",
       "store_updated": null,
@@ -175,7 +175,7 @@
       },
       "versions": {
         "dev": "1.0.3+26072801",
-        "prod": "1.0.2+26061102",
+        "prod": "1.0.3+26072801",
         "aab": "1.0.3+26072801"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
