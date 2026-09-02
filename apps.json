@@ -40,10 +40,10 @@
         "prod": "1.0.1+26080401",
         "aab": "1.0.1+26080401"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.cutoutai",
+      "store": "",
       "category": "Photography",
       "category_source": "store",
-      "store_updated": "Aug 13, 2026",
+      "store_updated": null,
       "store_version": null
     },
     {
@@ -63,10 +63,10 @@
         "prod": "1.0.2+26072801",
         "aab": "1.0.2+26072801"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
+      "store": "",
       "category": "Entertainment",
       "category_source": "store",
-      "store_updated": "Jul 28, 2026",
+      "store_updated": null,
       "store_version": null
     },
     {
@@ -86,7 +86,7 @@
         "prod": "1.0.1+26080401",
         "aab": "1.0.1+26080401"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.iptv.velix",
+      "store": "",
       "category": "Video Players",
       "category_source": "store",
       "store_updated": null,
