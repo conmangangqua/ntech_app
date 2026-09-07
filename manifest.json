@@ -1,0 +1,24 @@
+{
+  "name": "Ntech 🤝 Tranquil Mind Studio - Premium App Center",
+  "short_name": "Ntech",
+  "description": "Trung tâm tải ứng dụng — bản Dev, Live và AAB.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#7c3aed",
+  "background_color": "#f9f7ff",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
