@@ -18,8 +18,8 @@
         "aab": "1.0.0+26080601"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.aurora.drama",
-      "category": "Streaming",
-      "category_source": "rule",
+      "category": "movie",
+      "category_source": "store",
       "store_updated": "Aug 6, 2026",
       "store_version": null
     },
@@ -41,7 +41,7 @@
         "aab": "1.0.1+26080401"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.cutoutai",
-      "category": "Photography",
+      "category": "photo-ai",
       "category_source": "store",
       "store_updated": "Aug 13, 2026",
       "store_version": null
@@ -64,7 +64,7 @@
         "aab": "1.0.2+26072801"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.idolcallme",
-      "category": "Entertainment",
+      "category": "prank-call",
       "category_source": "store",
       "store_updated": "Jul 28, 2026",
       "store_version": null
@@ -86,8 +86,8 @@
         "prod": "1.0.1+26080401",
         "aab": "1.0.1+26080401"
       },
-      "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.iptv.velix",
-      "category": "Video Players",
+      "store": "",
+      "category": "iptv",
       "category_source": "store",
       "store_updated": null,
       "store_version": null
@@ -110,8 +110,8 @@
         "aab": "1.0.1+26090301"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilmind.kairo.chat",
-      "category": "AI Chat",
-      "category_source": "rule",
+      "category": "ai-chat",
+      "category_source": "store",
       "store_updated": "Sep 3, 2026",
       "store_version": null
     },
@@ -133,7 +133,7 @@
         "aab": "1.0.3+26062301"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.rollicon",
-      "category": "Personalization",
+      "category": "wallpaper",
       "category_source": "store",
       "store_updated": "Jun 23, 2026",
       "store_version": null
@@ -156,8 +156,8 @@
         "aab": "1.0.3+26072801"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.soniccleaner",
-      "category": "Cleaner & Booster",
-      "category_source": "rule",
+      "category": "speaker-cleaner",
+      "category_source": "store",
       "store_updated": "Jul 28, 2026",
       "store_version": null
     },
@@ -179,7 +179,7 @@
         "aab": "1.0.3+26072801"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquilpartner.stickerlab",
-      "category": "Personalization",
+      "category": "sticker",
       "category_source": "store",
       "store_updated": "Jul 28, 2026",
       "store_version": null
@@ -202,8 +202,8 @@
         "aab": "1.0.3+26062901"
       },
       "store": "https://play.google.com/store/apps/details?id=com.tranquiltmt.veilo.browser",
-      "category": "Browser",
-      "category_source": "rule",
+      "category": "browser",
+      "category_source": "store",
       "store_updated": "Jun 15, 2026",
       "store_version": null
     }
